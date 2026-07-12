@@ -443,44 +443,71 @@
       </div>
 
       <div class="bug-grid">
-        <!-- QA Scene Image Panel -->
-        <div class="glass-bug-details qa-scene-panel">
-          <img
-            src="qa_scene.jpg"
-            alt="Roblox QA Environment — Character approaching vehicle on city highway"
-            class="qa-scene-img"
-          />
+        <!-- Bug details panel (LEFT) — unchanged -->
+        <div class="glass-bug-details">
+          <div class="bug-header">
+            <span class="bug-id">BUG-104</span>
+            <span class="bug-badge priority-high">Priority: High</span>
+            <span class="bug-badge severity-medium">Severity: Medium</span>
+          </div>
+
+          <h3 class="bug-title">Character gets stuck while entering a vehicle</h3>
+
+          <div class="bug-meta">
+            <div><span>Build:</span> <strong class="text-cyan">v1.0.4-live</strong></div>
+            <div><span>Platform:</span> <strong>Windows PC</strong></div>
+            <div><span>Category:</span> <strong>Animation / Logic</strong></div>
+          </div>
+
+          <hr class="glass-divider">
+
+          <div class="bug-steps-wrapper">
+            <h4>Steps to Reproduce:</h4>
+            <ol class="steps-list">
+              <li id="sim-step-1">Spawn a standard 4-door sedan.</li>
+              <li id="sim-step-2">Stand directly next to the driver's side door.</li>
+              <li id="sim-step-3">Press the enter key <kbd>F</kbd> repeatedly while moving.</li>
+              <li id="sim-step-4">Observe player model freezing mid-animation.</li>
+            </ol>
+          </div>
+
+          <div class="bug-results">
+            <div class="result-box expected">
+              <span class="res-tag text-green">✓ Expected Result</span>
+              <p>Character initiates entry animation and smoothly enters the driver's seat.</p>
+            </div>
+            <div class="result-box actual">
+              <span class="res-tag text-red">✗ Actual Result</span>
+              <p>Player model freezes. Controls lock out. Character remains stuck until reconnecting.</p>
+            </div>
+          </div>
+
+          <button id="reproduce-btn" class="btn btn-glass-primary btn-full">
+            <span class="btn-text">SIMULATE BUG REPRODUCTION</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="play-icon"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+          </button>
         </div>
 
-
-        <!-- Viewport panel -->
-        <div class="glass-viewport">
+        <!-- QA Scene Image (RIGHT) — replaces the live viewport -->
+        <div class="glass-viewport qa-scene-panel">
           <div class="viewport-header">
             <span class="viewport-dot green"></span>
             <span>LIVE QA SCREEN - HOST: LOCAL</span>
           </div>
-          <div class="viewport-body">
-            <div id="sim-scene" class="sim-scene-idle">
-              <div class="sim-bg-scene"></div>
-              <div class="sim-car"></div>
-              <div class="sim-player"></div>
-              
-              <!-- Console Output Overlay -->
-              <div class="console-logs" id="console-logs">
-                <div class="log-line text-muted">[System] QA Sandbox loaded...</div>
-                <div class="log-line text-muted">[System] Player standing at coordinates [X: 142.3, Y: -1089.4]</div>
-              </div>
-
-              <!-- Glitch effect -->
-              <div class="glitch-overlay" id="glitch-overlay">GLITCH DETECTED: ANIM_LOCK_0x00F3</div>
-            </div>
+          <div class="viewport-body" style="padding:0; min-height:380px;">
+            <img
+              src="qa_scene.jpg"
+              alt="Roblox QA Environment — Character approaching vehicle on city highway"
+              class="qa-scene-img"
+            />
           </div>
           <div class="viewport-footer">
             <span>FPS: 60 | Latency: 12ms</span>
-            <span id="action-indicator" class="action-status">READY TO RUN</span>
+            <span class="action-status">READY TO RUN</span>
           </div>
         </div>
       </div>
+
     </div>
   </section>
 
