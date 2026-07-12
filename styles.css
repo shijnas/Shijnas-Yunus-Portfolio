@@ -595,12 +595,12 @@ section {
   background-image: url('profile.jpg');
   background-size: cover;
   background-position: center top;
-  opacity: 0.95;
-  filter: grayscale(100%);
+  opacity: 0.82;
+  filter: grayscale(100%) contrast(1.15) brightness(0.95);
   pointer-events: none;
   z-index: 0;
-  mask-image: linear-gradient(to left, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 0) 100%), linear-gradient(to top, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
-  -webkit-mask-image: linear-gradient(to left, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 0) 100%), linear-gradient(to top, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
+  mask-image: radial-gradient(circle at 60% 45%, rgba(0, 0, 0, 1) 25%, rgba(0, 0, 0, 0.4) 65%, transparent 92%);
+  -webkit-mask-image: radial-gradient(circle at 60% 45%, rgba(0, 0, 0, 1) 25%, rgba(0, 0, 0, 0.4) 65%, transparent 92%);
 }
 
 .hero-container {
@@ -703,6 +703,7 @@ section {
   justify-content: center;
   align-self: flex-end;
   margin-bottom: 20px;
+  margin-right: 140px;
 }
 
 .scene-card {
@@ -1967,6 +1968,8 @@ section {
   }
   .hero-glass-box {
     margin-top: 20px;
+    margin-right: 0;
+    align-self: center;
   }
   .hero-section::before {
     width: 320px;
