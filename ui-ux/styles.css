@@ -9,9 +9,9 @@
   --text-muted: #4a5568;
   
   /* Glass Variables (Can be updated dynamically by JS Sandbox) */
-  --glass-blur: 25px;
-  --glass-opacity: 0.07;
-  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-blur: 35px;
+  --glass-opacity: 0.10;
+  --glass-border: rgba(255, 255, 255, 0.16);
   --glass-background: rgba(255, 255, 255, var(--glass-opacity));
   
   /* Active Liquid Core Theme Gradients */
@@ -22,11 +22,58 @@
   --font-display: 'Outfit', sans-serif;
   --font-body: 'Inter', sans-serif;
   
-  --radius-sm: 8px;
-  --radius-md: 16px;
-  --radius-lg: 32px;
+  --radius-sm: 10px;
+  --radius-md: 20px;
+  --radius-lg: 28px;
   --transition-normal: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ==========================================================================
+   IPHONE LIQUID GLASS CORE COMPONENT OVERRIDES
+   ========================================================================== */
+.glass-card, 
+.glass-work-card, 
+.glass-skill-node, 
+.glass-sandbox-panel, 
+.sandbox-preview-container, 
+.contact-glass-card, 
+.glass-header {
+  background: var(--glass-background) !important;
+  backdrop-filter: blur(var(--glass-blur)) saturate(210%) !important;
+  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(210%) !important;
+  border: 1px solid var(--glass-border) !important;
+  box-shadow: 
+    0 16px 40px 0 rgba(0, 0, 0, 0.45),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.25),
+    inset 0 -1px 1px 0 rgba(0, 0, 0, 0.15) !important;
+  border-radius: var(--radius-md) !important;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.glass-card:hover, 
+.glass-work-card:hover, 
+.glass-skill-node:hover, 
+.glass-sandbox-panel:hover,
+.contact-glass-card:hover {
+  transform: translateY(-5px) scale(1.015) !important;
+  background: rgba(255, 255, 255, 0.14) !important;
+  box-shadow: 
+    0 24px 50px 0 rgba(0, 0, 0, 0.6),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.35),
+    inset 0 -1px 1px 0 rgba(0, 0, 0, 0.1) !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+/* iOS active scaling click feedback */
+.glass-card:active, 
+.glass-work-card:active, 
+.glass-skill-node:active, 
+.glass-sandbox-panel:active,
+.contact-glass-card:active,
+.btn:active,
+.sandbox-control-btn:active {
+  transform: scale(0.97) !important;
 }
 
 /* ==========================================================================
