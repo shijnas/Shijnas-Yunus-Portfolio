@@ -1472,50 +1472,167 @@ section {
 
 .sim-car {
   position: absolute;
-  bottom: 25px;
+  bottom: 30px;
   right: 50px;
   width: 140px;
-  height: 60px;
-  background: linear-gradient(to right, #00f2fe, #3a86c8);
-  border-radius: var(--radius-sm);
+  height: 55px;
+  background: linear-gradient(135deg, #00f2fe 0%, #0099ff 100%);
+  border-radius: 4px;
   z-index: 3;
   transition: all 0.5s ease;
+  box-shadow: 0 0 15px rgba(0, 242, 254, 0.3);
 }
+/* Roblox Car Cabin - Blocky low poly */
 .sim-car::before {
   content: '';
   position: absolute;
-  top: -20px; left: 30px; width: 70px; height: 25px;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-top-left-radius: 10px; border-top-right-radius: 10px;
-  border: 2px solid #3a86c8;
+  top: -18px;
+  left: 20px;
+  width: 80px;
+  height: 20px;
+  background: rgba(0, 242, 254, 0.2);
+  border: 3px solid #00f2fe;
+  border-radius: 2px;
 }
+/* Roblox Wheels - Blocky geometric wheels */
 .sim-car::after {
   content: '';
   position: absolute;
-  bottom: -10px; left: 20px; width: 25px; height: 25px;
-  background-color: #111;
-  border-radius: 50%;
-  box-shadow: 80px 0 0 #111;
+  bottom: -15px;
+  left: 15px;
+  width: 30px;
+  height: 30px;
+  background-color: #0b0f19;
+  border: 3px solid #1f2a44;
+  border-radius: 6px;
+  box-shadow: 80px 0 0 #0b0f19;
 }
 
+/* Roblox Blocky Character (R6 / R15 style) */
 .sim-player {
   position: absolute;
   bottom: 25px;
   left: 60px;
   width: 24px;
-  height: 60px;
-  background-color: #9d4edd;
-  border-radius: 6px;
+  height: 44px; /* Lower body / Torso height */
+  background-color: #111111; /* Black Hoodie color */
+  border-radius: 2px;
   z-index: 4;
   transition: all 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
-  box-shadow: 0 0 10px var(--neon-purple-glow);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
+/* Head - Square Roblox Head with Smile */
 .sim-player::before {
+  content: '🙂';
+  position: absolute;
+  top: -19px;
+  left: 1px;
+  width: 20px;
+  height: 20px;
+  background-color: #ffe0b2; /* Classic yellow/peach Roblox skin */
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+  line-height: 1;
+  border: 1px solid #ffcc80;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Roblox blocky arms (Hoodie color + skin hands) */
+.roblox-arm {
+  position: absolute;
+  top: 4px;
+  width: 6px;
+  height: 26px;
+  background-color: #111111; /* Hoodie sleeve */
+  border-radius: 1px;
+}
+.roblox-arm.left {
+  left: -7px;
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+}
+.roblox-arm.right {
+  right: -7px;
+  border-left: 1px solid rgba(255, 255, 255, 0.05);
+}
+/* Hand skin block */
+.roblox-arm::after {
   content: '';
   position: absolute;
-  top: -15px; left: 4px; width: 16px; height: 16px;
-  background-color: #b580e8;
-  border-radius: 50%;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: #ffe0b2;
+}
+
+/* Roblox blocky legs (Dark pants + White sneakers) */
+.roblox-legs {
+  position: absolute;
+  bottom: -16px;
+  left: 0;
+  width: 100%;
+  height: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+.roblox-leg {
+  width: 11px;
+  height: 100%;
+  background-color: #1a1a2e; /* Dark pants */
+  border-radius: 1px;
+  position: relative;
+}
+/* White Sneakers */
+.roblox-leg::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #ffffff;
+  border-radius: 1px 1px 0 0;
+}
+
+/* Roblox sports car details */
+.roblox-spoiler {
+  position: absolute;
+  top: -10px;
+  right: 10px;
+  width: 25px;
+  height: 6px;
+  background-color: #0b0f19;
+  border-radius: 1px;
+}
+.roblox-spoiler::before {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 3px;
+  width: 3px;
+  height: 4px;
+  background-color: #0b0f19;
+  box-shadow: 16px 0 0 #0b0f19;
+}
+.roblox-headlight {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px #ffffff;
+  border-radius: 1px;
+}
+.roblox-headlight.left {
+  bottom: 12px;
+  left: 4px;
+}
+.roblox-headlight.right {
+  bottom: 28px;
+  left: 4px;
 }
 
 /* Simulation animations */
