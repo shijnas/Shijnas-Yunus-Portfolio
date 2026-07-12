@@ -1463,20 +1463,8 @@ section {
   display: none !important;
 }
 
-.sim-player {
-  position: absolute;
-  bottom: 20px;
-  left: 10%;
-  width: 50px;
-  height: 80px;
-  background-image: url('roblox_character.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  mix-blend-mode: lighten;
-  z-index: 4;
-  transition: left 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
-}
+/* sim-player definition is in the PREMIUM AUTO-LOOP section below */
+
 
 .sim-car {
   position: absolute;
@@ -1493,75 +1481,205 @@ section {
   transition: all 0.5s ease;
 }
 
-/* Simulation animations */
-/* Idle position: Player starts standing on the far left */
-.sim-scene-idle .sim-player {
-  left: 10%;
-  transform: scale(1);
-  opacity: 1;
-}
+/* =============================================================
+   PREMIUM AUTO-LOOP ROBLOX QA SIMULATION
+   Character walks → stops at door → freezes → twitches → loops
+   ============================================================= */
 
-/* Step 1: Spawn standard 4-door sedan. Car is shown parked on the right. Player is on the left. */
-.sim-scene-running-1 .sim-player {
-  left: 10%;
-  transform: scale(1);
-}
-
-/* Step 2: Stand directly next to the driver's side door (Move character close to the cyan car door). */
-.sim-scene-running-2 .sim-player {
-  left: 56%;
-  transform: scale(1);
-}
-
-/* Step 3: Press the enter key F repeatedly while moving (Mash animation key, shifting forward closer to cabin). */
-.sim-scene-running-3 .sim-player {
-  left: 63%;
-  transform: scaleY(0.95);
-  animation: jitter 0.15s infinite;
-}
-
-/* Step 4: Observe player model freezing mid-animation (Freezes half-glitched in the driver side door frame). */
-.sim-scene-running-4 .sim-player {
-  left: 65%;
-  transform: translateY(-5px) scale(0.95) rotate(5deg);
-  filter: drop-shadow(0 0 12px #ef4444) saturate(2.5) hue-rotate(-45deg);
-  animation: vibrate 0.08s infinite, robloxTwitch 3s infinite alternate ease-in-out;
-}
-
-/* Premium Ambient Environment and Vehicle Animations */
+/* Always-running scene camera dolly */
 #sim-scene {
-  animation: cameraDolly 25s infinite alternate ease-in-out;
+  animation: cameraDolly 30s infinite alternate ease-in-out;
+  transform-origin: center center;
 }
 
+/* Car suspension idle bounce — always running */
 .sim-car {
-  animation: carSuspension 4s infinite ease-in-out;
+  animation: carSuspension 3.5s infinite ease-in-out;
+  transform-origin: bottom center;
 }
 
+/* Main character walk loop — no button needed */
+.sim-player {
+  position: absolute;
+  bottom: 20px;
+  left: 10%;
+  width: 50px;
+  height: 80px;
+  background-image: url('roblox_character.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  mix-blend-mode: lighten;
+  z-index: 4;
+  animation: robloxWalkCycle 14s infinite ease-in-out;
+  transform-origin: bottom center;
+}
+
+/* Override for button-triggered step states */
+.sim-scene-running-1 .sim-player { animation: robloxWalkCycle 14s infinite ease-in-out; }
+.sim-scene-running-2 .sim-player { animation: robloxWalkCycle 14s infinite ease-in-out; }
+.sim-scene-running-3 .sim-player { animation: robloxWalkCycle 14s infinite ease-in-out; }
+.sim-scene-running-4 .sim-player { animation: robloxWalkCycle 14s infinite ease-in-out; }
+.sim-scene-idle .sim-player      { animation: robloxWalkCycle 14s infinite ease-in-out; }
+
+/* ---------------------------------------------------------------
+   Main Character Walk Cycle Keyframes
+   Timing breakdown (14s total loop):
+   0–30%    Walk from left to car door
+   30–38%   Slow stop, reach for door handle
+   38–45%   Begin entry lean / pivot
+   45–80%   FROZEN: body half-in, feet split, glitch red
+   80–95%   Occasional twitches (broken animation)
+   95–100%  Reset back to start (instant snap)
+--------------------------------------------------------------- */
+@keyframes robloxWalkCycle {
+
+  /* PHASE 1: Walk from left toward car (0% → 30%) */
+  0% {
+    left: 6%;
+    transform: scaleY(1) translateY(0);
+    filter: none;
+    opacity: 1;
+  }
+  5% {
+    transform: scaleY(1.03) translateY(-1px);  /* Bob up */
+  }
+  10% {
+    left: 20%;
+    transform: scaleY(0.97) translateY(1px);   /* Bob down */
+    filter: none;
+  }
+  15% {
+    transform: scaleY(1.03) translateY(-1px);
+  }
+  20% {
+    left: 38%;
+    transform: scaleY(0.97) translateY(1px);
+    filter: none;
+  }
+  25% {
+    transform: scaleY(1.02) translateY(-1px);
+  }
+  30% {
+    left: 55%;
+    transform: scaleY(1) translateY(0);  /* Arrive at door */
+    filter: none;
+  }
+
+  /* PHASE 2: Slow stop + reach for door handle (30% → 38%) */
+  33% {
+    left: 58%;
+    transform: scaleY(1) translateX(3px) rotate(-2deg);  /* Lean in */
+    filter: none;
+  }
+  36% {
+    left: 60%;
+    transform: scaleY(1.02) translateX(5px) rotate(-4deg);  /* Reach */
+    filter: none;
+  }
+  38% {
+    left: 62%;
+    transform: scaleY(0.98) translateX(6px) rotate(-5deg);  /* Begin entry */
+    filter: none;
+  }
+
+  /* PHASE 3: Entry pivot + leg inside (38% → 45%) */
+  42% {
+    left: 64%;
+    transform: scaleY(0.95) translateX(7px) rotate(-6deg) skewX(-3deg);
+    filter: brightness(1.05);
+  }
+  45% {
+    /* FREEZE — body half inside door frame */
+    left: 65%;
+    transform: scaleY(0.93) translateX(8px) rotate(-7deg) skewX(-4deg);
+    filter: drop-shadow(0 0 8px #ef4444) saturate(1.5);
+  }
+
+  /* PHASE 4: Frozen state (45% → 78%) */
+  50% {
+    left: 65%;
+    transform: scaleY(0.93) translateX(8px) rotate(-7deg) skewX(-4deg);
+    filter: drop-shadow(0 0 12px #ef4444) saturate(2) hue-rotate(-30deg);
+  }
+  65% {
+    left: 65%;
+    transform: scaleY(0.93) translateX(8px) rotate(-7deg) skewX(-4deg);
+    filter: drop-shadow(0 0 14px #ef4444) saturate(2.5) hue-rotate(-40deg);
+  }
+  78% {
+    left: 65%;
+    transform: scaleY(0.93) translateX(8px) rotate(-7deg) skewX(-4deg);
+    filter: drop-shadow(0 0 12px #ef4444) saturate(2) hue-rotate(-30deg);
+  }
+
+  /* PHASE 5: Twitches (78% → 95%) */
+  80% {
+    left: 65%;
+    transform: scaleY(0.93) translateX(8px) rotate(-7deg) skewX(-4deg) translate(1px, 1px);
+    filter: drop-shadow(0 0 16px #ff2222) saturate(3) hue-rotate(-50deg) brightness(1.3);
+  }
+  82% {
+    left: 65%;
+    transform: scaleY(0.95) translateX(8px) rotate(-4deg) skewX(2deg) translate(-1px, 0);
+    filter: drop-shadow(0 0 10px #ef4444) saturate(2);
+  }
+  85% {
+    left: 65%;
+    transform: scaleY(0.91) translateX(10px) rotate(-10deg) skewX(-6deg) translate(2px, -2px);
+    filter: drop-shadow(0 0 18px #ff0000) saturate(3.5) hue-rotate(-60deg) brightness(1.4);
+  }
+  88% {
+    left: 65%;
+    transform: scaleY(0.93) translateX(8px) rotate(-7deg) skewX(-4deg);
+    filter: drop-shadow(0 0 12px #ef4444) saturate(2.5) hue-rotate(-40deg);
+  }
+  91% {
+    left: 65%;
+    transform: scaleY(0.94) translateX(7px) rotate(-5deg) skewX(-2deg) translate(-1px, 1px);
+    filter: drop-shadow(0 0 20px #ff1111) saturate(3) hue-rotate(-55deg) brightness(1.5);
+  }
+  95% {
+    left: 65%;
+    transform: scaleY(0.93) translateX(8px) rotate(-7deg) skewX(-4deg);
+    filter: drop-shadow(0 0 12px #ef4444) saturate(2.5) hue-rotate(-40deg);
+  }
+
+  /* PHASE 6: Reset to start (95% → 100%) */
+  98% {
+    left: 65%;
+    opacity: 0;
+    transform: scaleY(0.93) translateX(8px) rotate(-7deg) skewX(-4deg);
+    filter: drop-shadow(0 0 12px #ef4444) saturate(2);
+  }
+  99% {
+    left: 6%;
+    opacity: 0;
+    transform: scaleY(1) translateY(0);
+    filter: none;
+  }
+  100% {
+    left: 6%;
+    opacity: 1;
+    transform: scaleY(1) translateY(0);
+    filter: none;
+  }
+}
+
+/* ---------------------------------------------------------------
+   Slow cinematic dolly-in (background zoom)
+--------------------------------------------------------------- */
 @keyframes cameraDolly {
-  0% { transform: scale(1); }
-  100% { transform: scale(1.04); }
+  0%   { transform: scale(1); }
+  100% { transform: scale(1.05); }
 }
 
+/* ---------------------------------------------------------------
+   Car idle suspension bounce
+--------------------------------------------------------------- */
 @keyframes carSuspension {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(1.5px); }
-}
-
-@keyframes robloxTwitch {
-  0%, 90%, 100% { transform: translateY(-5px) scale(0.95) rotate(5deg); }
-  93% { transform: translateY(-3px) scale(0.93) rotate(8deg) skewX(2deg); }
-  96% { transform: translateY(-7px) scale(0.97) rotate(3deg) skewX(-2deg); }
-}
-
-@keyframes jitter {
-  0% { transform: scaleY(0.95) translateX(0); }
-  50% { transform: scaleY(1) translateX(2px); }
-  100% { transform: scaleY(0.95) translateX(0); }
-}
-@keyframes vibrate {
-  0% { transform: translateY(-5px) scale(0.95) rotate(5deg) translate(0.5px, 0.5px); }
-  50% { transform: translateY(-5px) scale(0.95) rotate(5deg) translate(-0.5px, -0.5px); }
-  100% { transform: translateY(-5px) scale(0.95) rotate(5deg) translate(0.5px, -0.5px); }
+  0%, 100% { transform: translateY(0px);   }
+  50%       { transform: translateY(2px);   }
 }
 
 .console-logs {
