@@ -544,20 +544,19 @@ section {
 }
 
 .hero-image {
-  width: 90%;
-  height: 90%;
-  object-fit: cover;
+  width: 95%;
+  height: 95%;
+  object-fit: contain;
+  object-position: bottom;
   border-radius: var(--radius-md);
-  opacity: 0.8;
+  opacity: 0.9;
   position: relative;
   z-index: 3;
-  mix-blend-mode: luminosity;
   transition: var(--transition-normal);
 }
 .scene-card:hover .hero-image {
-  opacity: 0.95;
-  mix-blend-mode: normal;
-  transform: scale(1.03);
+  opacity: 1;
+  transform: scale(1.04);
 }
 .scanlines {
   position: absolute;
