@@ -595,12 +595,11 @@ section {
   background-image: url('profile.png');
   background-size: cover;
   background-position: center top;
-  opacity: 0.82;
+  opacity: 0.85;
   filter: grayscale(100%) contrast(1.15) brightness(0.95);
   pointer-events: none;
   z-index: 0;
-  mask-image: radial-gradient(circle at 60% 45%, rgba(0, 0, 0, 1) 25%, rgba(0, 0, 0, 0.4) 65%, transparent 92%);
-  -webkit-mask-image: radial-gradient(circle at 60% 45%, rgba(0, 0, 0, 1) 25%, rgba(0, 0, 0, 0.4) 65%, transparent 92%);
+  mix-blend-mode: lighten;
 }
 
 .hero-container {
