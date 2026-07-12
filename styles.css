@@ -295,6 +295,7 @@ button {
 section {
   padding: 120px 0;
   position: relative;
+  scroll-margin-top: 100px;
 }
 
 .text-cyan { color: var(--neon-cyan); }
@@ -1612,7 +1613,7 @@ section {
    ========================================================================== */
 .games-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
   margin-top: 40px;
 }
@@ -2051,6 +2052,10 @@ section {
     grid-template-columns: 1fr;
     padding: 40px;
   }
+
+  .games-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 768px) {
@@ -2127,5 +2132,9 @@ section {
     flex-direction: column;
     text-align: center;
     gap: 12px;
+  }
+
+  .games-grid {
+    grid-template-columns: 1fr;
   }
 }
