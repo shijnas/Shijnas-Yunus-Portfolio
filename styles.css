@@ -1925,25 +1925,61 @@ section {
    FOOTER
    ========================================================================== */
 .footer {
-  background-color: #030303;
-  border-top: 1px solid rgba(255, 255, 255, 0.04);
-  padding: 40px 0;
-  font-size: 0.85rem;
-  color: var(--text-muted);
+  background: rgba(6, 8, 10, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 24px 0;
+  position: relative;
+  z-index: 10;
 }
+
 .footer-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  width: 100%;
 }
-.designed-by {
+
+.footer-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-icon {
+  color: #3b82f6;
+  fill: #3b82f6;
+  filter: drop-shadow(0 0 5px rgba(59, 130, 246, 0.5));
+}
+
+.footer-quote {
+  font-style: italic;
+  opacity: 0.8;
+}
+
+.footer-middle {
+  opacity: 0.9;
+}
+
+.footer-right {
+  display: flex;
+  align-items: center;
   font-family: var(--font-display);
 }
-.heart {
-  color: var(--neon-pink);
-  display: inline-block;
+
+.footer-right .heart {
+  color: #ef4444;
+  margin: 0 4px;
   animation: beat 1.5s infinite;
+  display: inline-block;
 }
+
 @keyframes beat {
   0%, 100% { transform: scale(1); }
   50% { transform: scale(1.2); }
@@ -2085,5 +2121,11 @@ section {
   
   .hire-grid {
     grid-template-columns: 1fr;
+  }
+  
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
   }
 }
