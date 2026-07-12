@@ -1525,7 +1525,32 @@ section {
   left: 65%;
   transform: translateY(-5px) scale(0.95) rotate(5deg);
   filter: drop-shadow(0 0 12px #ef4444) saturate(2.5) hue-rotate(-45deg);
-  animation: vibrate 0.08s infinite;
+  animation: vibrate 0.08s infinite, robloxTwitch 3s infinite alternate ease-in-out;
+}
+
+/* Premium Ambient Environment and Vehicle Animations */
+#sim-scene {
+  animation: cameraDolly 25s infinite alternate ease-in-out;
+}
+
+.sim-car {
+  animation: carSuspension 4s infinite ease-in-out;
+}
+
+@keyframes cameraDolly {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.04); }
+}
+
+@keyframes carSuspension {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(1.5px); }
+}
+
+@keyframes robloxTwitch {
+  0%, 90%, 100% { transform: translateY(-5px) scale(0.95) rotate(5deg); }
+  93% { transform: translateY(-3px) scale(0.93) rotate(8deg) skewX(2deg); }
+  96% { transform: translateY(-7px) scale(0.97) rotate(3deg) skewX(-2deg); }
 }
 
 @keyframes jitter {
@@ -1534,9 +1559,9 @@ section {
   100% { transform: scaleY(0.95) translateX(0); }
 }
 @keyframes vibrate {
-  0% { transform: translateY(-5px) scale(0.95) rotate(5deg) translate(1px, 1px); }
-  50% { transform: translateY(-5px) scale(0.95) rotate(5deg) translate(-1px, -1px); }
-  100% { transform: translateY(-5px) scale(0.95) rotate(5deg) translate(1px, -1px); }
+  0% { transform: translateY(-5px) scale(0.95) rotate(5deg) translate(0.5px, 0.5px); }
+  50% { transform: translateY(-5px) scale(0.95) rotate(5deg) translate(-0.5px, -0.5px); }
+  100% { transform: translateY(-5px) scale(0.95) rotate(5deg) translate(0.5px, -0.5px); }
 }
 
 .console-logs {
