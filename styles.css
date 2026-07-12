@@ -134,11 +134,60 @@ html {
 body {
   font-family: var(--font-body);
   color: var(--text-secondary);
-  background: 
-    linear-gradient(to right, rgba(0, 0, 0, 0.92) 20%, rgba(0, 0, 0, 0.5) 60%, rgba(0, 0, 0, 0.9) 100%),
-    url('ezio_assassin_wallpaper.jpg') no-repeat center right / cover fixed;
+  background-color: var(--bg-black);
   overflow-x: hidden;
   line-height: 1.6;
+}
+
+.parallax-bg-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.92) 25%, rgba(0, 0, 0, 0.5) 60%, rgba(0, 0, 0, 0.9) 100%),
+    url('ezio_assassin_wallpaper.jpg') no-repeat center right / cover;
+  pointer-events: none;
+  filter: url('#wind-lens');
+  -webkit-filter: url('#wind-lens');
+}
+
+.embers-container {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.ember {
+  position: absolute;
+  bottom: -20px;
+  background: radial-gradient(circle, rgba(254, 150, 0, 1) 20%, rgba(254, 80, 0, 0.4) 70%, transparent 100%);
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(254, 110, 0, 0.8), 0 0 20px rgba(254, 50, 0, 0.4);
+  opacity: 0;
+  animation: floatEmber linear infinite;
+}
+
+@keyframes floatEmber {
+  0% {
+    transform: translateY(0) translateX(0) scale(0.8);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(-50vh) translateX(30px) scale(1.1) rotate(180deg);
+    opacity: 0.6;
+  }
+  90% {
+    opacity: 0.2;
+  }
+  100% {
+    transform: translateY(-105vh) translateX(-20px) scale(0.8) rotate(360deg);
+    opacity: 0;
+  }
 }
 
 /* Custom Scrollbar */
