@@ -1583,52 +1583,73 @@ section {
   max-width: 440px;
 }
 
-.resume-preview-img {
+.themed-resume-preview {
+  color: var(--text-primary);
   width: 100%;
-  height: auto;
-  object-fit: contain;
-  border-radius: var(--radius-sm);
-  display: block;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  text-align: left;
 }
-.mock-header {
-  border-bottom: 2px solid #333;
-  padding-bottom: 12px;
-  margin-bottom: 16px;
+
+.resume-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 15px;
+  margin-bottom: 20px;
 }
-.mock-header h3 {
+
+.resume-header h3 {
   font-family: var(--font-display);
-  font-size: 1.3rem;
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 4px;
+  letter-spacing: 0.5px;
+  color: var(--text-primary) !important;
+}
+
+.resume-title {
+  font-size: 0.85rem;
   font-weight: 700;
-  color: #111;
-}
-.mock-header p {
-  font-size: 0.75rem;
-  color: #666;
   text-transform: uppercase;
+  margin-bottom: 6px;
+  letter-spacing: 0.5px;
 }
-.mock-contact {
-  display: block;
-  font-size: 0.65rem;
-  color: #777;
-  margin-top: 4px;
+
+.resume-contact {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
 }
-.mock-sect {
-  margin-bottom: 14px;
+
+.resume-contact .bullet {
+  color: var(--neon-cyan);
 }
-.mock-sect h5 {
+
+.resume-sect {
+  margin-bottom: 18px;
+}
+
+.resume-sect h5 {
   font-family: var(--font-display);
   font-size: 0.8rem;
   font-weight: 700;
-  color: #000;
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 2px;
-  margin-bottom: 6px;
+  color: var(--text-primary);
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+  border-left: 2px solid var(--neon-cyan);
+  padding-left: 8px;
+  text-transform: uppercase;
 }
-.mock-sect p {
-  font-size: 0.7rem;
-  color: #444;
-  line-height: 1.4;
+
+.resume-sect p {
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+  margin-bottom: 4px;
+}
+
+.resume-sect strong {
+  color: var(--text-primary);
 }
 
 /* ==========================================================================
