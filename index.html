@@ -4,32 +4,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shijnas Yunus | Gameplay QA Tester & Game Tester Portfolio</title>
-  <meta name="description" content="Portfolio of Shijnas Yunus, Gameplay QA Tester with 10+ years of gaming experience. Specializing in bug hunting, GTA V & RDR2 RP testing, and game analysis.">
+  <meta name="description" content="Portfolio of Shijnas Yunus, Gameplay QA Tester. Specializing in bug hunting, GTA V & RDR2 RP testing, using a premium liquid glass design model.">
   
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   
   <!-- CSS Stylesheet -->
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- Background Decorative Glowing Blobs -->
-  <div class="blob blob-1"></div>
-  <div class="blob blob-2"></div>
-  <div class="blob blob-3"></div>
+  <!-- Floating Liquid Organic Blobs behind glass -->
+  <div class="liquid-background">
+    <div class="liquid-blob blob-cyan"></div>
+    <div class="liquid-blob blob-purple"></div>
+    <div class="liquid-blob blob-pink"></div>
+  </div>
 
-  <!-- Header / Navigation -->
-  <header class="header">
+  <!-- Glass Header -->
+  <header class="glass-header">
     <div class="header-container">
       <a href="#home" class="logo">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="logo-icon"><line x1="6" y1="12" x2="10" y2="12"></line><line x1="8" y1="10" x2="8" y2="14"></line><line x1="15" y1="13" x2="15.01" y2="13"></line><line x1="18" y1="11" x2="18.01" y2="11"></line><rect x="2" y="6" width="20" height="12" rx="3"></rect></svg>
+        <span class="logo-dot"></span>
         <span>SHIJNAS YUNUS</span>
       </a>
       
-      <button class="mobile-nav-toggle" aria-label="Toggle navigation">
+      <button class="menu-toggle" aria-label="Toggle navigation">
         <span></span>
         <span></span>
         <span></span>
@@ -42,7 +44,7 @@
         <a href="#experience" class="nav-link">Experience</a>
         <a href="#workflow" class="nav-link">Workflow</a>
         <a href="#bug-report" class="nav-link">Sample Bug</a>
-        <a href="#games" class="nav-link">Games Played</a>
+        <a href="#games" class="nav-link">Games</a>
         <a href="#resume" class="nav-link">Resume</a>
         <a href="#contact" class="nav-btn-mobile">Contact Me</a>
       </nav>
@@ -55,50 +57,45 @@
   <section id="home" class="hero-section">
     <div class="container hero-container">
       <div class="hero-content">
-        <span class="hero-badge">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="22" y1="12" x2="18" y2="12"></line><line x1="6" y1="12" x2="2" y2="12"></line><line x1="12" y1="6" x2="12" y2="2"></line><line x1="12" y1="22" x2="12" y2="18"></line></svg>
+        <span class="designer-badge">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="badge-icon"><circle cx="12" cy="12" r="10"></circle><line x1="22" y1="12" x2="18" y2="12"></line><line x1="6" y1="12" x2="2" y2="12"></line><line x1="12" y1="6" x2="12" y2="2"></line><line x1="12" y1="22" x2="12" y2="18"></line></svg>
           Finding bugs before players do.
         </span>
         <h1 class="hero-title">SHIJNAS YUNUS</h1>
         <h2 class="hero-subtitle">Gameplay QA Tester <span class="accent-separator">|</span> Game Tester</h2>
-        <p class="hero-description">
+        <p class="hero-desc">
           Passionate Gameplay QA Tester with 10+ years of PC and mobile gaming experience and 3+ years of GTA V Roleplay testing. Skilled in identifying gameplay issues, reproducing bugs, documenting defects, and providing detailed feedback to improve player experience. Eager to contribute to professional game development teams.
         </p>
         
         <div class="hero-ctas">
-          <a href="#resume" class="btn btn-primary">
+          <a href="#resume" class="btn btn-glass-primary">
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
             Download Resume
           </a>
-          <a href="#experience" class="btn btn-secondary">View Testing Experience</a>
-          <a href="#contact" class="btn btn-outline">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-            Contact Me
-          </a>
+          <a href="#experience" class="btn btn-glass-secondary">View Experience</a>
+          <a href="#contact" class="btn btn-glass-outline">Contact Me</a>
         </div>
 
         <div class="hero-socials">
           <a href="https://linkedin.com/in/shijnas-yunus" target="_blank" aria-label="LinkedIn" class="social-link">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-          </a>
-          <a href="https://github.com" target="_blank" aria-label="GitHub" class="social-link">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
           </a>
           <a href="mailto:yshijnas@gmail.com" aria-label="Email" class="social-link">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
           </a>
           <a href="https://discord.com" target="_blank" aria-label="Discord" class="social-link">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 127.14 96.36" fill="currentColor"><path d="M107.7,8.07A105.15,105.15,0,0,0,77.26,0a77.19,77.19,0,0,0-3.3,6.83A96.67,96.67,0,0,0,53.22,6.83,77.19,77.19,0,0,0,49.88,0,105.15,105.15,0,0,0,19.44,8.07C3.66,31.58-1.86,54.65,1,77.53A105.73,105.73,0,0,0,32,96.36a77.7,77.7,0,0,0,6.63-10.85,68.43,68.43,0,0,1-10.5-5c.9-.65,1.76-1.34,2.58-2a75.58,75.58,0,0,0,72.9,0c.82.71,1.68,1.4,2.58,2a68.69,68.69,0,0,1-10.5,5,77.7,77.7,0,0,0,6.63,10.85,105.73,105.73,0,0,0,31-18.83C129.87,50.12,123.63,27.35,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53S36.18,40.36,42.45,40.36,53.83,46,53.83,53,48.72,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.24,60,73.24,53S78.41,40.36,84.69,40.36,96.07,46,96.07,53,91,65.69,84.69,65.69Z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 127.14 96.36" fill="currentColor"><path d="M107.7,8.07A105.15,105.15,0,0,0,77.26,0a77.19,77.19,0,0,0-3.3,6.83A96.67,96.67,0,0,0,53.22,6.83,77.19,77.19,0,0,0,49.88,0,105.15,105.15,0,0,0,19.44,8.07C3.66,31.58-1.86,54.65,1,77.53A105.73,105.73,0,0,0,32,96.36a77.7,77.7,0,0,0,6.63-10.85,68.43,68.43,0,0,1-10.5-5c.9-.65,1.76-1.34,2.58-2a75.58,75.58,0,0,0,72.9,0c.82.71,1.68,1.4,2.58,2a68.69,68.69,0,0,1-10.5,5,77.7,77.7,0,0,0,6.63,10.85,105.73,105.73,0,0,0,31-18.83C129.87,50.12,123.63,27.35,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53S36.18,40.36,42.45,40.36,53.83,46,53.83,53,48.72,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.24,60,73.24,53S78.41,40.36,84.69,40.36,96.07,46,96.07,53,91,65.69,84.69,65.69Z"/></svg>
           </a>
         </div>
       </div>
       
-      <div class="hero-visual">
-        <div class="scene-container">
-          <!-- Cyberpunk Gaming Setup Graphic / Visual Illustration -->
-          <div class="glowing-grid"></div>
-          <div class="hud-circle-outer"></div>
-          <div class="hud-circle-inner"></div>
+      <div class="hero-glass-box">
+        <div class="liquid-glass-card scene-card">
+          <div class="glass-reflection"></div>
+          <div class="hud-elements">
+            <div class="hud-circle-outer"></div>
+            <div class="hud-circle-inner"></div>
+          </div>
           <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=800" alt="Premium Gaming Setup" class="hero-image">
           <div class="scanlines"></div>
         </div>
@@ -108,9 +105,10 @@
     <!-- Quick Stats Grid -->
     <div class="container">
       <div class="stats-grid">
-        <div class="stat-card">
-          <div class="stat-icon-wrapper cyan-glow">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stat-icon"><rect x="2" y="6" width="20" height="12" rx="3"></rect><line x1="6" y1="12" x2="10" y2="12"></line><line x1="8" y1="10" x2="8" y2="14"></line><line x1="15" y1="13" x2="15.01" y2="13"></line><line x1="18" y1="11" x2="18.01" y2="11"></line></svg>
+        <!-- Stat Card 1 -->
+        <div class="glass-stat-card">
+          <div class="stat-icon-wrapper">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="3"></rect><line x1="6" y1="12" x2="10" y2="12"></line><line x1="8" y1="10" x2="8" y2="14"></line><line x1="15" y1="13" x2="15.01" y2="13"></line><line x1="18" y1="11" x2="18.01" y2="11"></line></svg>
           </div>
           <div class="stat-info">
             <h3 class="stat-number">10+</h3>
@@ -118,9 +116,10 @@
           </div>
         </div>
         
-        <div class="stat-card">
-          <div class="stat-icon-wrapper purple-glow">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stat-icon"><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="M4.93 4.93l1.41 1.41"></path><path d="M17.66 17.66l1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="M6.34 17.66l-1.41 1.41"></path><path d="M19.07 4.93l-1.41 1.41"></path><ellipse cx="12" cy="12" rx="4" ry="6"></ellipse></svg>
+        <!-- Stat Card 2 -->
+        <div class="glass-stat-card">
+          <div class="stat-icon-wrapper">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="M4.93 4.93l1.41 1.41"></path><path d="M17.66 17.66l1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="M6.34 17.66l-1.41 1.41"></path><path d="M19.07 4.93l-1.41 1.41"></path><ellipse cx="12" cy="12" rx="4" ry="6"></ellipse></svg>
           </div>
           <div class="stat-info">
             <h3 class="stat-number">3+</h3>
@@ -128,9 +127,10 @@
           </div>
         </div>
         
-        <div class="stat-card">
-          <div class="stat-icon-wrapper blue-glow">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stat-icon"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+        <!-- Stat Card 3 -->
+        <div class="glass-stat-card">
+          <div class="stat-icon-wrapper">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
           </div>
           <div class="stat-info">
             <h3 class="stat-number">100+</h3>
@@ -138,9 +138,10 @@
           </div>
         </div>
         
-        <div class="stat-card">
-          <div class="stat-icon-wrapper pink-glow">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stat-icon"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+        <!-- Stat Card 4 -->
+        <div class="glass-stat-card">
+          <div class="stat-icon-wrapper">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
           </div>
           <div class="stat-info">
             <h3 class="stat-number">PC & Mobile</h3>
@@ -154,14 +155,14 @@
   <!-- About Me Section -->
   <section id="about" class="about-section">
     <div class="container">
-      <div class="section-title-wrapper">
-        <span class="section-tag">ABOUT ME</span>
-        <h2 class="section-title">Who is Shijnas Yunus?</h2>
+      <div class="section-header">
+        <span class="sub-tag">ABOUT ME</span>
+        <h2 class="title">Who is Shijnas Yunus?</h2>
       </div>
       
       <div class="about-grid">
         <div class="about-visual">
-          <div class="about-visual-container">
+          <div class="terminal-glass-card">
             <div class="terminal-header">
               <span class="terminal-dot red"></span>
               <span class="terminal-dot yellow"></span>
@@ -181,7 +182,7 @@
               <p class="term-output indent-1">],</p>
               <p class="term-output indent-1">"passion": "Making games bulletproof"</p>
               <p class="term-output">}</p>
-              <p class="term-line"><span class="term-prompt">$</span> <span class="cursor">_</span></p>
+              <p class="term-line animate-cursor"><span class="term-prompt">$</span> <span class="cursor">_</span></p>
             </div>
           </div>
         </div>
@@ -196,12 +197,9 @@
           <p class="about-text">
             My extensive experience in the GTA V and Red Dead Redemption 2 Roleplay communities has significantly strengthened my ability to reproduce obscure issues, verify bug fixes, and deliver clear, structured feedback that developers appreciate.
           </p>
-          <p class="about-text">
-            I'm currently seeking opportunities as a Game Tester or Gameplay QA Tester where I can contribute my analytical skills and passion to help dev teams deliver polished, seamless, and highly enjoyable gaming experiences.
-          </p>
           
           <div class="about-location-badge">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="location-icon"><path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="location-icon"><path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"></path><circle cx="12" cy="10" r="3"></circle></svg>
             <span>Based in Kannur, Kerala, India — Open to Remote & Relocation</span>
           </div>
         </div>
@@ -209,84 +207,72 @@
     </div>
   </section>
 
-  <!-- Core Skills Section -->
+  <!-- Skills Section -->
   <section id="skills" class="skills-section">
     <div class="container">
-      <div class="section-title-wrapper centered">
-        <span class="section-tag">CORE SKILLS</span>
-        <h2 class="section-title">My Testing Toolkit</h2>
+      <div class="section-header centered">
+        <span class="sub-tag">CORE SKILLS</span>
+        <h2 class="title">My Testing Toolkit</h2>
       </div>
 
       <div class="skills-grid">
-        <!-- Skill Card 1 -->
-        <div class="skill-card">
-          <div class="skill-card-glow"></div>
+        <!-- Skill 1 -->
+        <div class="glass-skill-card">
           <div class="skill-header">
-            <div class="skill-icon-box cyan-bg">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="22" y1="12" x2="18" y2="12"></line><line x1="6" y1="12" x2="2" y2="12"></line><line x1="12" y1="6" x2="12" y2="2"></line><line x1="12" y1="22" x2="12" y2="18"></line></svg>
-            </div>
-            <h3 class="skill-title">Gameplay Testing</h3>
+            <span class="skill-icon">🎯</span>
+            <h3>Gameplay Testing</h3>
           </div>
-          <ul class="skill-list">
-            <li><span>Functional Testing</span></li>
-            <li><span>Regression Testing</span></li>
-            <li><span>Smoke Testing</span></li>
-            <li><span>Exploratory Testing</span></li>
-            <li><span>Usability Testing</span></li>
+          <ul class="skill-tags">
+            <li>Functional Testing</li>
+            <li>Regression Testing</li>
+            <li>Smoke Testing</li>
+            <li>Exploratory Testing</li>
+            <li>Usability Testing</li>
           </ul>
         </div>
 
-        <!-- Skill Card 2 -->
-        <div class="skill-card">
-          <div class="skill-card-glow"></div>
+        <!-- Skill 2 -->
+        <div class="glass-skill-card">
           <div class="skill-header">
-            <div class="skill-icon-box purple-bg">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="M4.93 4.93l1.41 1.41"></path><path d="M17.66 17.66l1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="M6.34 17.66l-1.41 1.41"></path><path d="M19.07 4.93l-1.41 1.41"></path><ellipse cx="12" cy="12" rx="4" ry="6"></ellipse></svg>
-            </div>
-            <h3 class="skill-title">Bug Reporting</h3>
+            <span class="skill-icon">🐛</span>
+            <h3>Bug Reporting</h3>
           </div>
-          <ul class="skill-list">
-            <li><span>Bug Reproduction</span></li>
-            <li><span>Steps to Reproduce</span></li>
-            <li><span>Expected vs Actual Results</span></li>
-            <li><span>Severity & Priority Assessment</span></li>
-            <li><span>Screenshot & Video Evidence</span></li>
+          <ul class="skill-tags">
+            <li>Bug Reproduction</li>
+            <li>Steps to Reproduce</li>
+            <li>Expected vs Actual Results</li>
+            <li>Severity & Priority</li>
+            <li>Video & Media Evidence</li>
           </ul>
         </div>
 
-        <!-- Skill Card 3 -->
-        <div class="skill-card">
-          <div class="skill-card-glow"></div>
+        <!-- Skill 3 -->
+        <div class="glass-skill-card">
           <div class="skill-header">
-            <div class="skill-icon-box blue-bg">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="21 8 21 21 3 21 3 8"></polyline><rect x="1" y="3" width="22" height="5"></rect><line x1="10" y1="12" x2="14" y2="12"></line></svg>
-            </div>
-            <h3 class="skill-title">Tools</h3>
+            <span class="skill-icon">🛠️</span>
+            <h3>Tools</h3>
           </div>
-          <ul class="skill-list">
-            <li><span>Google Sheets & MS Excel</span></li>
-            <li><span>Discord (Dev Comms)</span></li>
-            <li><span>OBS Studio (Capture)</span></li>
-            <li><span>Notion & Trello</span></li>
-            <li><span>Jira Bug Trackers (Simulated)</span></li>
+          <ul class="skill-tags">
+            <li>Google Sheets & Excel</li>
+            <li>Discord (Dev Comms)</li>
+            <li>OBS Studio (Capture)</li>
+            <li>Notion & Trello</li>
+            <li>Jira Bug Trackers</li>
           </ul>
         </div>
 
-        <!-- Skill Card 4 -->
-        <div class="skill-card">
-          <div class="skill-card-glow"></div>
+        <!-- Skill 4 -->
+        <div class="glass-skill-card">
           <div class="skill-header">
-            <div class="skill-icon-box pink-bg">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
-            </div>
-            <h3 class="skill-title">Technical Knowledge</h3>
+            <span class="skill-icon">💻</span>
+            <h3>Technical Knowledge</h3>
           </div>
-          <ul class="skill-list">
-            <li><span>Windows OS Navigation</span></li>
-            <li><span>PC Hardware Troubleshooting</span></li>
-            <li><span>Performance & FPS Analysis</span></li>
-            <li><span>Crash Log Extraction</span></li>
-            <li><span>Basic Network Diagnostics</span></li>
+          <ul class="skill-tags">
+            <li>Windows OS Navigation</li>
+            <li>PC Hardware Spec Check</li>
+            <li>Performance & FPS Analysis</li>
+            <li>Crash Log Extraction</li>
+            <li>Basic Network Diagnostics</li>
           </ul>
         </div>
       </div>
@@ -296,78 +282,47 @@
   <!-- Testing Experience Section -->
   <section id="experience" class="experience-section">
     <div class="container">
-      <div class="section-title-wrapper">
-        <span class="section-tag">TESTING EXPERIENCE</span>
-        <h2 class="section-title">Hands-on QA Experience</h2>
+      <div class="section-header">
+        <span class="sub-tag">TESTING EXPERIENCE</span>
+        <h2 class="title">QA Case Highlights</h2>
       </div>
 
       <div class="experience-grid">
         <!-- GTA V Card -->
-        <div class="exp-card gta-card">
-          <div class="exp-badge">GTA V RP Specialist</div>
-          <div class="exp-banner" style="background-image: linear-gradient(rgba(11, 13, 19, 0.4), rgba(11, 13, 19, 0.95)), url('https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=600');">
-            <h3 class="exp-game-title">GTA V Roleplay</h3>
-            <p class="exp-game-subtitle">3+ Years of Dedicated Gameplay QA</p>
+        <div class="glass-exp-card">
+          <div class="exp-banner gta-banner">
+            <div class="banner-gradient"></div>
+            <span class="game-badge gta">GTA V RP Specialist</span>
+            <h3>GTA V Roleplay</h3>
+            <p>3+ Years of Gameplay QA Experience</p>
           </div>
-          <div class="exp-content">
-            <ul class="exp-list">
-              <li>
-                <span class="exp-bullet"></span>
-                <span>Tested newly released gameplay features and scripted roleplay jobs.</span>
-              </li>
-              <li>
-                <span class="exp-bullet"></span>
-                <span>Verified bug fixes after server updates and patch deployments.</span>
-              </li>
-              <li>
-                <span class="exp-bullet"></span>
-                <span>Reproduced reported community issues under complex server conditions.</span>
-              </li>
-              <li>
-                <span class="exp-bullet"></span>
-                <span>Identified gameplay and physics exploits (noclip, money bugs, clipping).</span>
-              </li>
-              <li>
-                <span class="exp-bullet"></span>
-                <span>Tested custom inventory, vehicle, and economy mechanics for balance and UI glitches.</span>
-              </li>
-              <li>
-                <span class="exp-bullet"></span>
-                <span>Stress-tested high-occupancy multiplayer lobbies and verified sync rates.</span>
-              </li>
+          <div class="exp-details">
+            <ul class="experience-bullets">
+              <li>Tested newly released gameplay features and scripted jobs.</li>
+              <li>Verified bug fixes after updates.</li>
+              <li>Reproduced reported community issues.</li>
+              <li>Identified gameplay and physics exploits (money bugs, clipping).</li>
+              <li>Tested custom inventory, vehicle, and economy mechanics.</li>
+              <li>Stress-tested multiplayer servers and synchronization.</li>
             </ul>
           </div>
         </div>
 
         <!-- RDR2 Card -->
-        <div class="exp-card rdr-card">
-          <div class="exp-badge">RDR2 RP Expert</div>
-          <div class="exp-banner" style="background-image: linear-gradient(rgba(11, 13, 19, 0.4), rgba(11, 13, 19, 0.95)), url('https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&q=80&w=600');">
-            <h3 class="exp-game-title">Red Dead Redemption 2 Roleplay</h3>
-            <p class="exp-game-subtitle">Immersive World & Mechanic Verification</p>
+        <div class="glass-exp-card">
+          <div class="exp-banner rdr-banner">
+            <div class="banner-gradient"></div>
+            <span class="game-badge rdr">RDR2 RP Expert</span>
+            <h3>Red Dead Redemption 2 Roleplay</h3>
+            <p>Mechanics & World State Verification</p>
           </div>
-          <div class="exp-content">
-            <ul class="exp-list">
-              <li>
-                <span class="exp-bullet"></span>
-                <span>Tested custom missions, NPC interactions, and server-specific gameplay loops.</span>
-              </li>
-              <li>
-                <span class="exp-bullet"></span>
-                <span>Verified economy balance, item shop pricing, and resource gathering rates.</span>
-              </li>
-              <li>
-                <span class="exp-bullet"></span>
-                <span>Reported visual anomalies, animation clipping, and environmental design bugs.</span>
-              </li>
-              <li>
-                <span class="exp-bullet"></span>
-                <span>Documented gameplay inconsistencies between server scripts and base game logic.</span>
-              </li>
-              <li>
-                <span class="exp-bullet"></span>
-                <span>Assisted developer teams in isolating server-side sync issues and desync bugs.</span>
-              </li>
+          <div class="exp-details">
+            <ul class="experience-bullets">
+              <li>Tested custom missions, NPC behaviors, and roleplay scripts.</li>
+              <li>Verified economy balances, store prices, and gathering mechanics.</li>
+              <li>Reported visual bugs, animation clippings, and model glitches.</li>
+              <li>Documented gameplay inconsistencies in server logic.</li>
+              <li>Assisted devs in identifying server-side synchronization errors.</li>
             </ul>
           </div>
         </div>
@@ -375,179 +330,142 @@
     </div>
   </section>
 
-  <!-- Testing Workflow Section -->
+  <!-- Testing Workflow -->
   <section id="workflow" class="workflow-section">
     <div class="container">
-      <div class="section-title-wrapper centered">
-        <span class="section-tag">TESTING WORKFLOW</span>
-        <h2 class="section-title">My Bug Hunting Protocol</h2>
+      <div class="section-header centered">
+        <span class="sub-tag">TESTING WORKFLOW</span>
+        <h2 class="title">My Bug Hunting Protocol</h2>
       </div>
 
-      <div class="workflow-container">
-        <!-- Step 1 -->
-        <div class="workflow-step" data-step="1">
-          <div class="step-line-progress"></div>
-          <div class="step-number-container">
-            <div class="step-number">01</div>
-          </div>
-          <div class="step-card">
-            <div class="step-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
-            </div>
-            <h3 class="step-title">Play & Explore</h3>
-            <p class="step-desc">Deeply explore gameplay mechanics, map boundaries, menus, and new updates to understand expected behavior.</p>
+      <div class="workflow-timeline">
+        <!-- Node 1 -->
+        <div class="workflow-node">
+          <div class="node-circle">01</div>
+          <div class="node-content">
+            <h4>PLAY & EXPLORE</h4>
+            <p>Explore game loops and new scripts to define expected behavior boundaries.</p>
           </div>
         </div>
 
-        <!-- Step 2 -->
-        <div class="workflow-step" data-step="2">
-          <div class="step-line-progress"></div>
-          <div class="step-number-container">
-            <div class="step-number">02</div>
-          </div>
-          <div class="step-card">
-            <div class="step-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
-            </div>
-            <h3 class="step-title">Identify Issues</h3>
-            <p class="step-desc">Spot deviations, crashes, performance drops, collision issues, or logic gaps that disrupt the player flow.</p>
+        <!-- Node 2 -->
+        <div class="workflow-node">
+          <div class="node-circle">02</div>
+          <div class="node-content">
+            <h4>FIND BUG</h4>
+            <p>Identify glitches, anomalies, animation loops, or sync desync issues.</p>
           </div>
         </div>
 
-        <!-- Step 3 -->
-        <div class="workflow-step" data-step="3">
-          <div class="step-line-progress"></div>
-          <div class="step-number-container">
-            <div class="step-number">03</div>
-          </div>
-          <div class="step-card">
-            <div class="step-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"></path></svg>
-            </div>
-            <h3 class="step-title">Reproduce Consistently</h3>
-            <p class="step-desc">Isolate variables to document a reliable 100% reproduction path. Identify the exact triggers of the glitch.</p>
+        <!-- Node 3 -->
+        <div class="workflow-node">
+          <div class="node-circle">03</div>
+          <div class="node-content">
+            <h4>REPRODUCE</h4>
+            <p>Establish a 100% consistent reproduction path, isolating triggering variables.</p>
           </div>
         </div>
 
-        <!-- Step 4 -->
-        <div class="workflow-step" data-step="4">
-          <div class="step-line-progress"></div>
-          <div class="step-number-container">
-            <div class="step-number">04</div>
-          </div>
-          <div class="step-card">
-            <div class="step-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-            </div>
-            <h3 class="step-title">Document Clearly</h3>
-            <p class="step-desc">Write highly professional, easy-to-follow bug reports with specs, steps, expected/actual results, and media proof.</p>
+        <!-- Node 4 -->
+        <div class="workflow-node">
+          <div class="node-circle">04</div>
+          <div class="node-content">
+            <h4>DOCUMENT</h4>
+            <p>Write highly professional bug reports with exact steps and media evidence.</p>
           </div>
         </div>
 
-        <!-- Step 5 -->
-        <div class="workflow-step" data-step="5">
-          <div class="step-number-container">
-            <div class="step-number">05</div>
-          </div>
-          <div class="step-card">
-            <div class="step-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-            </div>
-            <h3 class="step-title">Verify & Close</h3>
-            <p class="step-desc">Once developers release a fix, re-test aggressively to ensure the bug is resolved and no new regressions arose.</p>
+        <!-- Node 5 -->
+        <div class="workflow-node">
+          <div class="node-circle">05</div>
+          <div class="node-content">
+            <h4>VERIFY FIX</h4>
+            <p>Test builds aggressively after code updates to close issues safely.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Interactive Sample Bug Report -->
-  <section id="bug-report" class="bug-report-section">
+  <!-- Sample Bug Report (Interactive Dashboard) -->
+  <section id="bug-report" class="bug-section">
     <div class="container">
-      <div class="section-title-wrapper">
-        <span class="section-tag">SAMPLE BUG REPORT</span>
-        <h2 class="section-title">Interactive QA Dashboard</h2>
+      <div class="section-header">
+        <span class="sub-tag">SAMPLE BUG REPORT</span>
+        <h2 class="title">Interactive QA Sandbox</h2>
       </div>
 
-      <div class="bug-report-grid">
-        <!-- Jira/Bug Report Details -->
-        <div class="bug-card">
-          <div class="bug-card-header">
+      <div class="bug-grid">
+        <!-- Bug details panel -->
+        <div class="glass-bug-details">
+          <div class="bug-header">
             <span class="bug-id">BUG-104</span>
-            <span class="bug-badge-priority high">Priority: High</span>
-            <span class="bug-badge-severity medium">Severity: Medium</span>
-          </div>
-          
-          <h3 class="bug-report-title">Character gets stuck while entering a vehicle</h3>
-          
-          <div class="bug-meta-grid">
-            <div class="meta-item"><span class="meta-label">Build:</span> <span class="meta-val text-neon-cyan">v1.0.4-live</span></div>
-            <div class="meta-item"><span class="meta-label">Platform:</span> <span class="meta-val">Windows PC</span></div>
-            <div class="meta-item"><span class="meta-label">Category:</span> <span class="meta-val">Animation / Physics</span></div>
+            <span class="bug-badge priority-high">Priority: High</span>
+            <span class="bug-badge severity-medium">Severity: Medium</span>
           </div>
 
-          <hr class="bug-divider">
+          <h3 class="bug-title">Character gets stuck while entering a vehicle</h3>
 
-          <div class="bug-details-section">
-            <h4 class="bug-section-title">Steps to Reproduce</h4>
-            <ol class="bug-steps-list">
-              <li class="step-item" id="sim-step-1">Spawn a standard 4-door sedan.</li>
-              <li class="step-item" id="sim-step-2">Stand directly next to the driver's side door.</li>
-              <li class="step-item" id="sim-step-3">Press the enter key <kbd>F</kbd> repeatedly while moving forward.</li>
-              <li class="step-item" id="sim-step-4">Observe player model freezing mid-animation.</li>
+          <div class="bug-meta">
+            <div><span>Build:</span> <strong class="text-cyan">v1.0.4-live</strong></div>
+            <div><span>Platform:</span> <strong>Windows PC</strong></div>
+            <div><span>Category:</span> <strong>Animation / Logic</strong></div>
+          </div>
+
+          <hr class="glass-divider">
+
+          <div class="bug-steps-wrapper">
+            <h4>Steps to Reproduce:</h4>
+            <ol class="steps-list">
+              <li id="sim-step-1">Spawn a standard 4-door sedan.</li>
+              <li id="sim-step-2">Stand directly next to the driver's side door.</li>
+              <li id="sim-step-3">Press the enter key <kbd>F</kbd> repeatedly while moving.</li>
+              <li id="sim-step-4">Observe player model freezing mid-animation.</li>
             </ol>
           </div>
 
-          <div class="bug-results-box">
-            <div class="result-block expected">
-              <div class="result-header">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-green"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Expected Result</span>
-              </div>
-              <p>The character smoothly initiates the entry animation and transitions to the driver's seat.</p>
+          <div class="bug-results">
+            <div class="result-box expected">
+              <span class="res-tag text-green">✓ Expected Result</span>
+              <p>Character initiates entry animation and smoothly enters the driver's seat.</p>
             </div>
-
-            <div class="result-block actual">
-              <div class="result-header">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-red"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-                <span>Actual Result</span>
-              </div>
-              <p>The player model freezes halfway through the animation. Controls lock out. Player remains stuck until disconnecting.</p>
+            <div class="result-box actual">
+              <span class="res-tag text-red">✗ Actual Result</span>
+              <p>Player model freezes. Controls lock out. Character remains stuck until reconnecting.</p>
             </div>
           </div>
 
-          <button id="reproduce-btn" class="btn btn-primary btn-full">
+          <button id="reproduce-btn" class="btn btn-glass-primary btn-full">
             <span class="btn-text">SIMULATE BUG REPRODUCTION</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="simulate-icon"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="play-icon"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
           </button>
         </div>
 
-        <!-- Simulated Game Console/Viewport -->
-        <div class="viewport-card">
+        <!-- Viewport panel -->
+        <div class="glass-viewport">
           <div class="viewport-header">
-            <div class="viewport-indicator green"></div>
-            <span>LIVE QA VIEWPORT - BUILD: 104</span>
+            <span class="viewport-dot green"></span>
+            <span>LIVE QA SCREEN - HOST: LOCAL</span>
           </div>
           <div class="viewport-body">
             <div id="sim-scene" class="sim-scene-idle">
-              <!-- Visual elements of the simulation -->
               <div class="sim-bg-scene"></div>
               <div class="sim-car"></div>
               <div class="sim-player"></div>
               
-              <!-- Console Logs Overlay -->
+              <!-- Console Output Overlay -->
               <div class="console-logs" id="console-logs">
                 <div class="log-line text-muted">[System] QA Sandbox loaded...</div>
                 <div class="log-line text-muted">[System] Player standing at coordinates [X: 142.3, Y: -1089.4]</div>
               </div>
 
-              <!-- Glitch Overlay effect -->
+              <!-- Glitch effect -->
               <div class="glitch-overlay" id="glitch-overlay">GLITCH DETECTED: ANIM_LOCK_0x00F3</div>
             </div>
           </div>
           <div class="viewport-footer">
-            <span>FPS: 60 | Latency: 12ms | V-Sync: ON</span>
-            <span class="viewport-action-indicator" id="action-indicator">READY TO RUN</span>
+            <span>FPS: 60 | Latency: 12ms</span>
+            <span id="action-indicator" class="action-status">READY TO RUN</span>
           </div>
         </div>
       </div>
@@ -557,100 +475,64 @@
   <!-- Games Played Section -->
   <section id="games" class="games-section">
     <div class="container">
-      <div class="section-title-wrapper centered">
-        <span class="section-tag">GAMES PLAYED</span>
-        <h2 class="section-title">My Gaming Footprint</h2>
-        <p class="section-subtitle">A collection of titles where I have extensive gameplay and mechanics experience.</p>
+      <div class="section-header centered">
+        <span class="sub-tag">GAMES PLAYED</span>
+        <h2 class="title">My Gaming Footprint</h2>
+        <p class="subtitle">Titles where I have extensive gameplay and mechanics knowledge.</p>
       </div>
 
       <div class="games-grid">
         <!-- Game 1 -->
-        <div class="game-card-item">
-          <div class="game-overlay"></div>
+        <div class="glass-game-card">
           <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=300" alt="GTA V" class="game-img">
-          <div class="game-info-overlay">
-            <h4 class="game-name">GTA V</h4>
-            <span class="game-tag">3000+ Hrs</span>
+          <div class="game-info">
+            <h4>GTA V</h4>
+            <span class="game-time">3000+ Hrs</span>
           </div>
         </div>
 
         <!-- Game 2 -->
-        <div class="game-card-item">
-          <div class="game-overlay"></div>
-          <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&q=80&w=300" alt="Red Dead Redemption 2" class="game-img">
-          <div class="game-info-overlay">
-            <h4 class="game-name">RDR 2</h4>
-            <span class="game-tag">1200+ Hrs</span>
+        <div class="glass-game-card">
+          <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&q=80&w=300" alt="Red Dead 2" class="game-img">
+          <div class="game-info">
+            <h4>RDR 2</h4>
+            <span class="game-time">1200+ Hrs</span>
           </div>
         </div>
 
         <!-- Game 3 -->
-        <div class="game-card-item">
-          <div class="game-overlay"></div>
+        <div class="glass-game-card">
           <img src="https://images.unsplash.com/photo-1538481199705-c710c4e965fc?auto=format&fit=crop&q=80&w=300" alt="PUBG" class="game-img">
-          <div class="game-info-overlay">
-            <h4 class="game-name">PUBG Battlegrounds</h4>
-            <span class="game-tag">800+ Hrs</span>
+          <div class="game-info">
+            <h4>PUBG</h4>
+            <span class="game-time">800+ Hrs</span>
           </div>
         </div>
 
         <!-- Game 4 -->
-        <div class="game-card-item">
-          <div class="game-overlay"></div>
-          <img src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?auto=format&fit=crop&q=80&w=300" alt="Call of Duty: MW" class="game-img">
-          <div class="game-info-overlay">
-            <h4 class="game-name">Call of Duty: MW</h4>
-            <span class="game-tag">1000+ Hrs</span>
+        <div class="glass-game-card">
+          <img src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?auto=format&fit=crop&q=80&w=300" alt="Call of Duty" class="game-img">
+          <div class="game-info">
+            <h4>CoD: MW</h4>
+            <span class="game-time">1000+ Hrs</span>
           </div>
         </div>
 
         <!-- Game 5 -->
-        <div class="game-card-item">
-          <div class="game-overlay"></div>
+        <div class="glass-game-card">
           <img src="https://images.unsplash.com/photo-1542751173-021b16753dd0?auto=format&fit=crop&q=80&w=300" alt="Valorant" class="game-img">
-          <div class="game-info-overlay">
-            <h4 class="game-name">Valorant</h4>
-            <span class="game-tag">900+ Hrs</span>
+          <div class="game-info">
+            <h4>Valorant</h4>
+            <span class="game-time">900+ Hrs</span>
           </div>
         </div>
 
         <!-- Game 6 -->
-        <div class="game-card-item">
-          <div class="game-overlay"></div>
+        <div class="glass-game-card">
           <img src="https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&q=80&w=300" alt="Minecraft" class="game-img">
-          <div class="game-info-overlay">
-            <h4 class="game-name">Minecraft</h4>
-            <span class="game-tag">1500+ Hrs</span>
-          </div>
-        </div>
-
-        <!-- Game 7 -->
-        <div class="game-card-item">
-          <div class="game-overlay"></div>
-          <img src="https://images.unsplash.com/photo-1580234810907-b40315b76418?auto=format&fit=crop&q=80&w=300" alt="Bully" class="game-img">
-          <div class="game-info-overlay">
-            <h4 class="game-name">Bully</h4>
-            <span class="game-tag">250+ Hrs</span>
-          </div>
-        </div>
-
-        <!-- Game 8 -->
-        <div class="game-card-item">
-          <div class="game-overlay"></div>
-          <img src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&q=80&w=300" alt="Need for Speed Heat" class="game-img">
-          <div class="game-info-overlay">
-            <h4 class="game-name">NFS Heat</h4>
-            <span class="game-tag">400+ Hrs</span>
-          </div>
-        </div>
-
-        <!-- Game 9 -->
-        <div class="game-card-item">
-          <div class="game-overlay"></div>
-          <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=300" alt="Counter-Strike 2" class="game-img">
-          <div class="game-info-overlay">
-            <h4 class="game-name">CS 2</h4>
-            <span class="game-tag">1200+ Hrs</span>
+          <div class="game-info">
+            <h4>Minecraft</h4>
+            <span class="game-time">1500+ Hrs</span>
           </div>
         </div>
       </div>
@@ -660,44 +542,37 @@
   <!-- Resume Section -->
   <section id="resume" class="resume-section">
     <div class="container">
-      <div class="section-title-wrapper">
-        <span class="section-tag">RESUME</span>
-        <h2 class="section-title">Credentials & Experience</h2>
+      <div class="section-header">
+        <span class="sub-tag">RESUME</span>
+        <h2 class="title">Credentials & History</h2>
       </div>
 
       <div class="resume-grid">
-        <div class="resume-content-left">
-          <h3 class="resume-lead-title">Want to know more about my experience and qualifications?</h3>
-          <p class="resume-desc">
-            Download my comprehensive CV summarizing my years of gameplay QA testing, detailed methodology, and platform experience. Let's collaborate to build better games!
-          </p>
-          <a href="#" class="btn btn-primary btn-large">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+        <div class="resume-left">
+          <h3>Want to know more about my experience and qualifications?</h3>
+          <p>Download my comprehensive CV summarizing my years of gameplay QA testing, detailed methodology, and platform experience.</p>
+          <a href="#" class="btn btn-glass-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
             DOWNLOAD RESUME (PDF)
           </a>
         </div>
 
-        <div class="resume-preview-container">
-          <div class="resume-glass-frame">
-            <!-- Simulated Resume Preview -->
+        <div class="resume-right">
+          <div class="resume-glass-preview">
             <div class="mock-resume">
-              <div class="mock-resume-header">
+              <div class="mock-header">
                 <h3>SHIJNAS YUNUS</h3>
                 <p>Gameplay QA Tester | Game Tester</p>
               </div>
-              <div class="mock-resume-body">
-                <div class="mock-resume-section">
-                  <h4>SUMMARY</h4>
-                  <p>Passionate Gameplay QA Tester with 10+ years of gaming and 3+ years GTA V roleplay testing experience. Skilled in identifying gameplay defects, bugs, and sync errors.</p>
+              <div class="mock-body">
+                <div class="mock-sect">
+                  <h5>SUMMARY</h5>
+                  <p>Passionate Gameplay QA Tester with 10+ years of gaming and 3+ years GTA V roleplay testing experience. Skilled in reproducing animation locks, collision exploits, and synchronization errors.</p>
                 </div>
-                <div class="mock-resume-section">
-                  <h4>EXPERIENCE</h4>
-                  <p><strong>Lead Gameplay Tester</strong> | GTA V RP Community</p>
-                  <p><strong>QA Mechanic Specialist</strong> | RDR 2 RP Community</p>
-                </div>
-                <div class="mock-resume-section">
-                  <h4>EDUCATION</h4>
-                  <p>High school, specialized in Technical Systems</p>
+                <div class="mock-sect">
+                  <h5>EXPERIENCE</h5>
+                  <p><strong>Lead Tester</strong> | GTA V RP Community</p>
+                  <p><strong>QA Specialist</strong> | RDR 2 RP Community</p>
                 </div>
               </div>
             </div>
@@ -708,168 +583,76 @@
   </section>
 
   <!-- Why Hire Me Section -->
-  <section class="hire-me-section">
+  <section class="hire-section">
     <div class="container">
-      <div class="section-title-wrapper centered">
-        <span class="section-tag">WHY HIRE ME?</span>
-        <h2 class="section-title">What I Bring to Your Team</h2>
+      <div class="section-header centered">
+        <span class="sub-tag">WHY HIRE ME?</span>
+        <h2 class="title">Traits I Bring to Your Team</h2>
       </div>
 
       <div class="hire-grid">
-        <!-- Card 1 -->
-        <div class="hire-card">
-          <div class="hire-icon-wrapper">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
-          </div>
-          <h4 class="hire-title">Strong Attention to Detail</h4>
-        </div>
-        
-        <!-- Card 2 -->
-        <div class="hire-card">
-          <div class="hire-icon-wrapper">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-          </div>
-          <h4 class="hire-title">Fast Bug Reproduction</h4>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="hire-card">
-          <div class="hire-icon-wrapper">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
-          </div>
-          <h4 class="hire-title">Clear Documentation</h4>
-        </div>
-
-        <!-- Card 4 -->
-        <div class="hire-card">
-          <div class="hire-icon-wrapper">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="3"></rect><line x1="6" y1="12" x2="10" y2="12"></line><line x1="8" y1="10" x2="8" y2="14"></line></svg>
-          </div>
-          <h4 class="hire-title">Passion for Games</h4>
-        </div>
-
-        <!-- Card 5 -->
-        <div class="hire-card">
-          <div class="hire-icon-wrapper">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-          </div>
-          <h4 class="hire-title">Team Player</h4>
-        </div>
-
-        <!-- Card 6 -->
-        <div class="hire-card">
-          <div class="hire-icon-wrapper">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
-          </div>
-          <h4 class="hire-title">Quick Learner</h4>
-        </div>
-
-        <!-- Card 7 -->
-        <div class="hire-card">
-          <div class="hire-icon-wrapper">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
-          </div>
-          <h4 class="hire-title">Analytical Thinking</h4>
-        </div>
-
-        <!-- Card 8 -->
-        <div class="hire-card">
-          <div class="hire-icon-wrapper">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
-          </div>
-          <h4 class="hire-title">Excellent Communication</h4>
-        </div>
+        <div class="glass-hire-card"><span class="hire-icon">👁️</span><h4>Strong attention to detail</h4></div>
+        <div class="glass-hire-card"><span class="hire-icon">⚡</span><h4>Fast bug reproduction</h4></div>
+        <div class="glass-hire-card"><span class="hire-icon">📄</span><h4>Clear documentation</h4></div>
+        <div class="glass-hire-card"><span class="hire-icon">🎮</span><h4>Passion for games</h4></div>
+        <div class="glass-hire-card"><span class="hire-icon">👥</span><h4>Team player</h4></div>
+        <div class="glass-hire-card"><span class="hire-icon">💡</span><h4>Quick learner</h4></div>
+        <div class="glass-hire-card"><span class="hire-icon">⚙️</span><h4>Analytical thinking</h4></div>
+        <div class="glass-hire-card"><span class="hire-icon">🗣️</span><h4>Excellent communication</h4></div>
       </div>
     </div>
   </section>
 
-  <!-- Contact Section (Let's Build Better Games) -->
+  <!-- Contact Section -->
   <section id="contact" class="contact-section">
     <div class="container">
-      <div class="contact-grid">
-        <div class="contact-info-panel">
-          <span class="section-tag">LET'S BUILD BETTER GAMES</span>
-          <h2 class="contact-headline">Connect With Me</h2>
-          <p class="contact-lead">
-            Whether you need a dedicated Game Tester for a multiplayer project, sandbox simulation, or a gameplay QA role in game development, I'm ready to dive in.
-          </p>
-
-          <div class="contact-details-list">
-            <!-- Email -->
+      <div class="contact-glass-panel">
+        <div class="contact-left">
+          <span class="sub-tag">LET'S BUILD BETTER GAMES</span>
+          <h2>Connect With Me</h2>
+          <p>Whether you need a dedicated Game Tester for a multiplayer project, sandbox simulation, or a gameplay QA role in game development, I'm ready to dive in.</p>
+          
+          <div class="contact-info-list">
             <div class="contact-item">
-              <div class="contact-icon-wrapper">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-              </div>
-              <div class="contact-text-box">
-                <span class="contact-label">Email</span>
-                <span class="contact-value font-tech" id="email-value">yshijnas@gmail.com</span>
+              <span class="item-label">EMAIL</span>
+              <div class="item-value-row">
+                <span class="item-val" id="email-value">yshijnas@gmail.com</span>
                 <button class="copy-btn" data-clipboard="email-value" aria-label="Copy email">
                   <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                 </button>
               </div>
             </div>
 
-            <!-- Phone -->
             <div class="contact-item">
-              <div class="contact-icon-wrapper">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-              </div>
-              <div class="contact-text-box">
-                <span class="contact-label">Phone</span>
-                <span class="contact-value font-tech">+91 82817 17535</span>
-              </div>
+              <span class="item-label">PHONE</span>
+              <span class="item-val">+91 82817 17535</span>
             </div>
 
-            <!-- Location -->
             <div class="contact-item">
-              <div class="contact-icon-wrapper">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-              </div>
-              <div class="contact-text-box">
-                <span class="contact-label">Location</span>
-                <span class="contact-value">Kannur, Kerala, India</span>
-              </div>
-            </div>
-
-            <!-- LinkedIn -->
-            <div class="contact-item">
-              <div class="contact-icon-wrapper">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-              </div>
-              <div class="contact-text-box">
-                <span class="contact-label">LinkedIn</span>
-                <a href="https://linkedin.com/in/shijnas-yunus" target="_blank" class="contact-value link">linkedin.com/in/shijnas-yunus</a>
-              </div>
-            </div>
-
-            <!-- Discord -->
-            <div class="contact-item">
-              <div class="contact-icon-wrapper">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 127.14 96.36" fill="currentColor"><path d="M107.7,8.07A105.15,105.15,0,0,0,77.26,0a77.19,77.19,0,0,0-3.3,6.83A96.67,96.67,0,0,0,53.22,6.83,77.19,77.19,0,0,0,49.88,0,105.15,105.15,0,0,0,19.44,8.07C3.66,31.58-1.86,54.65,1,77.53A105.73,105.73,0,0,0,32,96.36a77.7,77.7,0,0,0,6.63-10.85,68.43,68.43,0,0,1-10.5-5c.9-.65,1.76-1.34,2.58-2a75.58,75.58,0,0,0,72.9,0c.82.71,1.68,1.4,2.58,2a68.69,68.69,0,0,1-10.5,5,77.7,77.7,0,0,0,6.63,10.85,105.73,105.73,0,0,0,31-18.83C129.87,50.12,123.63,27.35,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53S36.18,40.36,42.45,40.36,53.83,46,53.83,53,48.72,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.24,60,73.24,53S78.41,40.36,84.69,40.36,96.07,46,96.07,53,91,65.69,84.69,65.69Z"/></svg>
-              </div>
-              <div class="contact-text-box">
-                <span class="contact-label">Discord</span>
-                <span class="contact-value font-tech" id="discord-value">shijnas_yunus</span>
-                <button class="copy-btn" data-clipboard="discord-value" aria-label="Copy Discord handle">
+              <span class="item-label">DISCORD</span>
+              <div class="item-value-row">
+                <span class="item-val" id="discord-value">shijnas_yunus</span>
+                <button class="copy-btn" data-clipboard="discord-value" aria-label="Copy Discord ID">
                   <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                 </button>
               </div>
             </div>
+
+            <div class="contact-item">
+              <span class="item-label">LINKEDIN</span>
+              <a href="https://linkedin.com/in/shijnas-yunus" target="_blank" class="item-val link">linkedin.com/in/shijnas-yunus</a>
+            </div>
           </div>
         </div>
 
-        <div class="contact-visual-panel">
-          <div class="neon-gaming-setup">
-            <!-- Graphical card representing the game tester vibe -->
-            <div class="setup-glare"></div>
-            <div class="setup-content">
-              <div class="setup-text">TEST</div>
-              <div class="setup-text text-neon-purple">PLAY</div>
-              <div class="setup-text">REPORT</div>
-              <div class="setup-text text-neon-cyan">REPEAT.</div>
+        <div class="contact-right">
+          <div class="neon-glass-display">
+            <div class="display-lines">
+              <div>TEST</div>
+              <div class="highlight-purple">PLAY</div>
+              <div>REPORT</div>
+              <div class="highlight-cyan">REPEAT.</div>
             </div>
-            <div class="neon-line cyan-line"></div>
-            <div class="neon-line purple-line"></div>
           </div>
         </div>
       </div>
@@ -879,18 +662,8 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="container footer-container">
-      <div class="footer-left">
-        <a href="#home" class="logo">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="logo-icon"><rect x="2" y="6" width="20" height="12" rx="3"></rect><line x1="6" y1="12" x2="10" y2="12"></line><line x1="8" y1="10" x2="8" y2="14"></line><line x1="15" y1="13" x2="15.01" y2="13"></line><line x1="18" y1="11" x2="18.01" y2="11"></line></svg>
-          <span>SHIJNAS YUNUS</span>
-        </a>
-        <p class="footer-tagline">"Quality isn't accidental — it's tested."</p>
-      </div>
-
-      <div class="footer-right">
-        <p>&copy; 2026 Shijnas Yunus | Gameplay QA Tester. All rights reserved.</p>
-        <p class="designed-by">Designed with <span class="heart">&hearts;</span> for Gaming</p>
-      </div>
+      <p>&copy; 2026 Shijnas Yunus | Gameplay QA Tester. All rights reserved.</p>
+      <p class="designed-by">Designed with <span class="heart">&hearts;</span> for Gaming</p>
     </div>
   </footer>
 

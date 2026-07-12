@@ -7,16 +7,16 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ==========================================================================
      STICKY HEADER & ACTIVE SECTION NAV LINKS
      ========================================================================== */
-  const header = document.querySelector('.header');
+  const header = document.querySelector('.glass-header');
   const navLinks = document.querySelectorAll('.nav-link');
   const sections = document.querySelectorAll('section');
 
   window.addEventListener('scroll', () => {
     // Add scrolled class to header
     if (window.scrollY > 50) {
-      header.classList.add('scrolled');
+      header.style.backgroundColor = "rgba(0, 0, 0, 0.75)";
     } else {
-      header.classList.remove('scrolled');
+      header.style.backgroundColor = "rgba(0, 0, 0, 0.4)";
     }
 
     // Scroll active link highlight
@@ -40,12 +40,12 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ==========================================================================
      MOBILE NAVIGATION MENU
      ========================================================================== */
-  const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+  const menuToggle = document.querySelector('.menu-toggle');
   const navMenu = document.querySelector('.nav-menu');
 
-  if (mobileNavToggle && navMenu) {
-    mobileNavToggle.addEventListener('click', () => {
-      mobileNavToggle.classList.toggle('open');
+  if (menuToggle && navMenu) {
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('open');
       navMenu.classList.toggle('open');
     });
 
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileLinks = document.querySelectorAll('.nav-link, .nav-btn-mobile');
     mobileLinks.forEach(link => {
       link.addEventListener('click', () => {
-        mobileNavToggle.classList.remove('open');
+        menuToggle.classList.remove('open');
         navMenu.classList.remove('open');
       });
     });
@@ -78,10 +78,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 <polyline points="20 6 9 17 4 12"></polyline>
               </svg>
             `;
-            btn.style.borderColor = 'rgba(16, 185, 129, 0.3)';
             setTimeout(() => {
               btn.innerHTML = originalHTML;
-              btn.style.borderColor = '';
             }, 2000);
           })
           .catch(err => {
@@ -97,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const reproduceBtn = document.getElementById('reproduce-btn');
   const simScene = document.getElementById('sim-scene');
   const consoleLogs = document.getElementById('console-logs');
-  const viewportIndicator = document.querySelector('.viewport-indicator');
+  const viewportIndicator = document.querySelector('.viewport-dot');
   const actionIndicator = document.getElementById('action-indicator');
   
   // Bug Steps Elements
@@ -107,11 +105,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const step4 = document.getElementById('sim-step-4');
   const bugSteps = [step1, step2, step3, step4];
 
-  let simTimeoutId = null;
-
   if (reproduceBtn && simScene) {
     reproduceBtn.addEventListener('click', () => {
-      // If a simulation is running, ignore clicks or clear state
       if (reproduceBtn.classList.contains('disabled')) return;
       
       runBugSimulation();
@@ -119,7 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function runBugSimulation() {
-    // Disable button, clear log timeouts
+    // Disable button
     reproduceBtn.classList.add('disabled');
     reproduceBtn.disabled = true;
     const btnText = reproduceBtn.querySelector('.btn-text');
@@ -127,9 +122,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Reset simulator UI & classes
     simScene.className = 'sim-scene-idle';
-    viewportIndicator.className = 'viewport-indicator green';
+    viewportIndicator.className = 'viewport-dot green';
     viewportIndicator.style.color = '#10b981';
-    actionIndicator.textContent = "INITIALIZING TESTING ENVIRONMENT...";
+    actionIndicator.textContent = "INITIALIZING ENVIRONMENT...";
     actionIndicator.style.color = 'var(--neon-cyan)';
     
     bugSteps.forEach(step => {
@@ -189,7 +184,7 @@ document.addEventListener('DOMContentLoaded', () => {
           // Step 4 Execution (4600ms delay)
           setTimeout(() => {
             simScene.className = 'sim-scene-running-4';
-            viewportIndicator.className = 'viewport-indicator red';
+            viewportIndicator.className = 'viewport-dot red';
             viewportIndicator.style.color = '#ef4444';
             actionIndicator.textContent = "ERROR ENCOUNTERED";
             actionIndicator.style.color = 'var(--error)';
