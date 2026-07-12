@@ -1699,6 +1699,10 @@ section {
   line-height: 1.7;
   color: var(--text-secondary);
 }
+.resume-right {
+  display: flex;
+  justify-content: flex-end;
+}
 
 .resume-glass-preview {
   background: rgba(255, 255, 255, 0.03);
@@ -2039,6 +2043,9 @@ section {
   }
   .resume-left {
     align-items: center;
+  }
+  .resume-right {
+    justify-content: center;
   }
   .resume-glass-preview {
     margin: 0 auto;
