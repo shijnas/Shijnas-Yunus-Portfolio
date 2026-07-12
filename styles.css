@@ -1681,7 +1681,7 @@ section {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 60px;
-  align-items: center;
+  align-items: start;
 }
 .resume-left {
   display: flex;
