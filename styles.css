@@ -1720,6 +1720,7 @@ section {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
   width: 100%;
   max-width: 440px;
+  margin-top: -24px;
 }
 
 .themed-resume-preview {
@@ -2055,7 +2056,7 @@ section {
     justify-content: center;
   }
   .resume-glass-preview {
-    margin: 0 auto;
+    margin: 30px auto 0 auto;
   }
   
   .hire-grid {
