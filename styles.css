@@ -1606,6 +1606,12 @@ section {
   color: #666;
   text-transform: uppercase;
 }
+.mock-contact {
+  display: block;
+  font-size: 0.65rem;
+  color: #777;
+  margin-top: 4px;
+}
 .mock-sect {
   margin-bottom: 14px;
 }
