@@ -972,7 +972,7 @@ section {
    ========================================================================== */
 .experience-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 32px;
 }
 
@@ -1005,6 +1005,7 @@ section {
 }
 .gta-banner { background-image: url('https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/271590/capsule_616x353.jpg'); }
 .rdr-banner { background-image: url('https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1174180/capsule_616x353.jpg'); }
+.ground-banner { background-image: url('https://images.unsplash.com/photo-1538481199705-c710c4e965fc?auto=format&fit=crop&q=80&w=600'); }
 
 .banner-gradient {
   position: absolute;
@@ -1028,6 +1029,7 @@ section {
 }
 .game-badge.gta { color: var(--neon-cyan); border-color: rgba(0, 242, 254, 0.2); }
 .game-badge.rdr { color: #f2a900; border-color: rgba(242, 169, 0, 0.2); }
+.game-badge.ground { color: var(--neon-purple); border-color: rgba(157, 78, 221, 0.2); }
 
 .exp-banner h3 {
   font-family: var(--font-display);
@@ -1047,6 +1049,9 @@ section {
 }
 .rdr-banner p {
   color: #f2a900;
+}
+.ground-banner p {
+  color: var(--neon-purple);
 }
 
 .exp-details {
