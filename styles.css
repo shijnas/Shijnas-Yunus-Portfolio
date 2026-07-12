@@ -1480,15 +1480,26 @@ section {
   position: absolute;
   inset: 0;
   overflow: hidden;
-  background-image: url('roblox_scene.png');
-  background-size: cover;
-  background-position: center;
+  background: radial-gradient(ellipse at 50% 80%, #0d1b2a 0%, #0a1520 40%, #050d18 100%);
+}
+
+/* Ground / road strip */
+#sim-scene::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 28px;
+  background: linear-gradient(180deg, #1a2540 0%, #141e35 100%);
+  border-top: 1px solid rgba(100, 120, 180, 0.25);
+  z-index: 2;
 }
 
 /* ── Roblox character overlay (transparent PNG) ─────────── */
 .sim-player {
   position: absolute;
-  bottom: 20px;
+  bottom: 28px;
   left: 10%;
   width: 55px;
   height: 90px;
@@ -1503,7 +1514,7 @@ section {
 /* ── Roblox car overlay (transparent PNG) ───────────────── */
 .sim-car {
   position: absolute;
-  bottom: 22px;
+  bottom: 24px;
   left: 64%;
   width: 160px;
   height: 80px;
