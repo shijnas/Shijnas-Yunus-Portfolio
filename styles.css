@@ -1459,10 +1459,38 @@ section {
   background-position: center;
 }
 
-.sim-bg-scene,
-.sim-car,
-.sim-player {
+.sim-bg-scene {
   display: none !important;
+}
+
+.sim-player {
+  position: absolute;
+  bottom: 20px;
+  left: 45px;
+  width: 50px;
+  height: 80px;
+  background-image: url('roblox_character.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  mix-blend-mode: lighten;
+  z-index: 4;
+  transition: all 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.sim-car {
+  position: absolute;
+  bottom: 25px;
+  right: 50px;
+  width: 150px;
+  height: 70px;
+  background-image: url('roblox_car.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  mix-blend-mode: lighten;
+  z-index: 3;
+  transition: all 0.5s ease;
 }
 
 /* Simulation animations */
@@ -1474,8 +1502,7 @@ section {
 }
 .sim-scene-running-4 .sim-player {
   transform: translateX(185px) translateY(-10px) rotate(15deg);
-  background-color: var(--error);
-  box-shadow: 0 0 20px var(--error);
+  filter: drop-shadow(0 0 15px #ef4444) saturate(3) hue-rotate(-50deg);
   animation: vibrate 0.1s infinite;
 }
 
