@@ -588,10 +588,11 @@ section {
   top: 0;
   bottom: 0;
   right: 0;
-  width: 380px;
+  width: 50%;
   background-image: url('profile.png');
-  background-size: cover;
-  background-position: center top;
+  background-size: contain;
+  background-position: right bottom;
+  background-repeat: no-repeat;
   opacity: 0.85;
   filter: grayscale(100%) contrast(1.15) brightness(0.95);
   pointer-events: none;
@@ -1974,6 +1975,7 @@ section {
     left: 50%;
     transform: translate(-50%, -50%);
     right: auto;
+    background-position: center;
     opacity: 0.15;
     z-index: 0;
   }
