@@ -38,6 +38,41 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* ==========================================================================
+     NAVIGATION LIQUID GLASS BUBBLE TRACKER
+     ========================================================================== */
+  const navMenuElement = document.querySelector('.nav-menu');
+  const liquidBubble = document.querySelector('.nav-liquid-bubble');
+
+  if (navMenuElement && liquidBubble) {
+    const updateBubblePosition = (link) => {
+      if (window.innerWidth <= 768) {
+        liquidBubble.style.opacity = '0';
+        return;
+      }
+      const rect = link.getBoundingClientRect();
+      const menuRect = navMenuElement.getBoundingClientRect();
+      
+      const left = rect.left - menuRect.left;
+      const width = rect.width;
+      const height = rect.height;
+      
+      liquidBubble.style.left = `${left}px`;
+      liquidBubble.style.width = `${width}px`;
+      liquidBubble.style.height = `${height}px`;
+      liquidBubble.style.opacity = '1';
+    };
+
+    navLinks.forEach(link => {
+      link.addEventListener('mouseenter', () => updateBubblePosition(link));
+      link.addEventListener('focus', () => updateBubblePosition(link));
+    });
+
+    navMenuElement.addEventListener('mouseleave', () => {
+      liquidBubble.style.opacity = '0';
+    });
+  }
+
+  /* ==========================================================================
      MOBILE NAVIGATION MENU
      ========================================================================== */
   const menuToggle = document.querySelector('.menu-toggle');
