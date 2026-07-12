@@ -1401,6 +1401,16 @@ section {
   color: var(--neon-cyan);
 }
 
+/* Step state colors */
+.steps-list li.step-done {
+  color: var(--neon-cyan);
+  font-weight: 600;
+}
+.steps-list li.step-error {
+  color: var(--error);
+  font-weight: 700;
+}
+
 .bug-results {
   display: grid;
   grid-template-columns: 1fr 1fr;
