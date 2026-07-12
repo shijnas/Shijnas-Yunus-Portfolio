@@ -728,8 +728,11 @@
   <!-- SVG Wind Displace Filter -->
   <svg style="display: none;">
     <filter id="wind-lens">
-      <feTurbulence type="fractalNoise" baseFrequency="0.01 0.03" numOctaves="1" result="noise" />
-      <feDisplacementMap in="SourceGraphic" in2="noise" scale="12" xChannelSelector="R" yChannelSelector="G" />
+      <feTurbulence type="fractalNoise" baseFrequency="0.008 0.02" numOctaves="2" result="noise" />
+      <feOffset dx="0" dy="0" in="noise" result="shiftedNoise">
+        <animate attributeName="dx" values="0; -300; 0" dur="20s" repeatCount="indefinite" />
+      </feOffset>
+      <feDisplacementMap in="SourceGraphic" in2="shiftedNoise" scale="14" xChannelSelector="R" yChannelSelector="G" />
     </filter>
   </svg>
 

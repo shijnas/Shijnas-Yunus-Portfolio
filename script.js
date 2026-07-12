@@ -247,33 +247,4 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 1000);
   }
 
-  /* ==========================================================================
-     BACKGROUND ANIMATION EFFECT (WAVING WIND CAPE & PARALLAX SCROLL)
-     ========================================================================== */
-  const bgLayer = document.querySelector('.parallax-bg-layer');
-  const turbulence = document.querySelector('#wind-lens feTurbulence');
-
-  // Parallax Scrolling effect
-  window.addEventListener('scroll', () => {
-    if (bgLayer && window.innerWidth > 768) {
-      const scrollOffset = window.scrollY * 0.15; // Move background at 15% rate
-      bgLayer.style.transform = `translateY(${scrollOffset}px)`;
-    }
-  });
-
-  // Waving wind turbulence displacement map animation (60fps)
-  if (turbulence) {
-    let frameValue = 0;
-    const animateWind = () => {
-      frameValue += 0.006;
-      // Cycle baseFrequency parameters to simulate wind gust ripples
-      const baseFreqX = 0.008 + Math.sin(frameValue) * 0.0015;
-      const baseFreqY = 0.02 + Math.cos(frameValue * 0.8) * 0.003;
-      
-      turbulence.setAttribute('baseFrequency', `${baseFreqX} ${baseFreqY}`);
-      requestAnimationFrame(animateWind);
-    };
-    requestAnimationFrame(animateWind);
-  }
-
 });
