@@ -134,7 +134,9 @@ html {
 body {
   font-family: var(--font-body);
   color: var(--text-secondary);
-  background-color: var(--bg-black);
+  background: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.92) 20%, rgba(0, 0, 0, 0.5) 60%, rgba(0, 0, 0, 0.9) 100%),
+    url('ezio_assassin_wallpaper.jpg') no-repeat center right / cover fixed;
   overflow-x: hidden;
   line-height: 1.6;
 }
@@ -1883,6 +1885,10 @@ section {
 }
 
 @media (max-width: 768px) {
+  body {
+    background-attachment: scroll;
+    background-position: center center;
+  }
   section {
     padding: 80px 0;
   }
