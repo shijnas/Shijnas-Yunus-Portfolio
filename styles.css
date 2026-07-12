@@ -63,8 +63,29 @@
     0 16px 40px 0 rgba(0, 0, 0, 0.5),
     inset 1px 1px 2px 0 rgba(255, 255, 255, 0.2),
     inset -1px -1px 3px 0 rgba(0, 0, 0, 0.3) !important;
-  border-radius: var(--radius-md) !important;
+  border-radius: 45px !important; /* Extremely smooth rounded capsule borders */
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+/* Pill / Capsule shapes for buttons, badges, and tags */
+.btn, 
+.designer-badge, 
+.bug-badge, 
+.nav-link,
+.social-link,
+.copy-btn,
+.res-tag,
+.steps-list li,
+.contact-input,
+.contact-textarea,
+.nav-btn {
+  border-radius: 9999px !important; /* Perfect oval capsules */
+}
+
+/* Textarea needs slightly less radius to avoid clipping text */
+.contact-textarea {
+  border-radius: 24px !important;
+  padding: 18px 24px !important;
 }
 
 .glass-stat-card:hover, 
@@ -233,16 +254,18 @@ section {
    GLASS HEADER
    ========================================================================== */
 .glass-header {
-  height: 80px;
+  height: 70px;
   position: fixed;
-  top: 0; left: 0; right: 0;
+  top: 20px; 
+  left: 5%; 
+  right: 5%;
   z-index: 1000;
   display: flex;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 9999px !important;
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1200px;
   transition: var(--transition-normal);
 }
 
