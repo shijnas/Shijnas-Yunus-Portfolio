@@ -494,16 +494,25 @@
             <span class="viewport-dot green"></span>
             <span>LIVE QA SCREEN - HOST: LOCAL</span>
           </div>
-          <div class="viewport-body" style="padding:0; min-height:380px;">
-            <img
-              src="qa_scene.jpg"
-              alt="Roblox QA Environment — Character approaching vehicle on city highway"
-              class="qa-scene-img"
-            />
+          <div class="viewport-body">
+            <div id="sim-scene" class="sim-scene-idle">
+              <div class="sim-bg-scene"></div>
+              <div class="sim-car"></div>
+              <div class="sim-player"></div>
+
+              <!-- Console Output Overlay -->
+              <div class="console-logs" id="console-logs">
+                <div class="log-line text-muted">[System] QA Sandbox loaded...</div>
+                <div class="log-line text-muted">[System] Player standing at coordinates [X: 142.3, Y: -1089.4]</div>
+              </div>
+
+              <!-- Glitch effect -->
+              <div class="glitch-overlay" id="glitch-overlay">GLITCH DETECTED: ANIM_LOCK_0x00F3</div>
+            </div>
           </div>
           <div class="viewport-footer">
             <span>FPS: 60 | Latency: 12ms</span>
-            <span class="action-status">READY TO RUN</span>
+            <span id="action-indicator" class="action-status">READY TO RUN</span>
           </div>
         </div>
       </div>
