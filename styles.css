@@ -1512,6 +1512,20 @@ section {
   background-repeat: no-repeat;
   background-position: bottom center;
   z-index: 3;
+  opacity: 0;
+  transform: scale(0.85);
+  pointer-events: none;
+  transition: opacity 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Show car when spawned (Step 1 to 4) */
+.sim-scene-running-1 .sim-car,
+.sim-scene-running-2 .sim-car,
+.sim-scene-running-3 .sim-car,
+.sim-scene-running-4 .sim-car {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
 }
 
 /* ── Step-class transitions ────────────────────────────────── */
