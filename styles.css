@@ -1496,42 +1496,47 @@ section {
 /* Simulation animations */
 /* Idle position: Player starts standing on the far left */
 .sim-scene-idle .sim-player {
-  transform: translateX(0) scale(1);
+  left: 45px;
+  transform: scale(1);
   opacity: 1;
 }
 
 /* Step 1: Spawn standard 4-door sedan. Car is shown parked on the right. Player is on the left. */
 .sim-scene-running-1 .sim-player {
-  transform: translateX(0) scale(1);
+  left: 45px;
+  transform: scale(1);
 }
 
 /* Step 2: Stand directly next to the driver's side door (Move character close to the cyan car door). */
 .sim-scene-running-2 .sim-player {
-  transform: translateX(190px) scale(1);
+  left: calc(100% - 190px);
+  transform: scale(1);
 }
 
 /* Step 3: Press the enter key F repeatedly while moving (Mash animation key, shifting forward closer to cabin). */
 .sim-scene-running-3 .sim-player {
-  transform: translateX(205px) scaleY(0.95);
+  left: calc(100% - 175px);
+  transform: scaleY(0.95);
   animation: jitter 0.15s infinite;
 }
 
 /* Step 4: Observe player model freezing mid-animation (Freezes half-glitched in the driver side door frame). */
 .sim-scene-running-4 .sim-player {
-  transform: translateX(212px) translateY(-5px) scale(0.95) rotate(5deg);
+  left: calc(100% - 168px);
+  transform: translateY(-5px) scale(0.95) rotate(5deg);
   filter: drop-shadow(0 0 12px #ef4444) saturate(2.5) hue-rotate(-45deg);
   animation: vibrate 0.08s infinite;
 }
 
 @keyframes jitter {
-  0% { transform: translateX(205px) scaleY(0.95); }
-  50% { transform: translateX(207px) scaleY(1); }
-  100% { transform: translateX(205px) scaleY(0.95); }
+  0% { transform: scaleY(0.95) translateX(0); }
+  50% { transform: scaleY(1) translateX(2px); }
+  100% { transform: scaleY(0.95) translateX(0); }
 }
 @keyframes vibrate {
-  0% { transform: translateX(212px) translateY(-5px) scale(0.95) rotate(5deg) translate(1px, 1px); }
-  50% { transform: translateX(212px) translateY(-5px) scale(0.95) rotate(5deg) translate(-1px, -1px); }
-  100% { transform: translateX(212px) translateY(-5px) scale(0.95) rotate(5deg) translate(1px, -1px); }
+  0% { transform: translateY(-5px) scale(0.95) rotate(5deg) translate(1px, 1px); }
+  50% { transform: translateY(-5px) scale(0.95) rotate(5deg) translate(-1px, -1px); }
+  100% { transform: translateY(-5px) scale(0.95) rotate(5deg) translate(1px, -1px); }
 }
 
 .console-logs {
