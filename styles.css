@@ -238,7 +238,7 @@ button {
    ========================================================================== */
 .container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 24px;
 }
@@ -443,7 +443,7 @@ section {
 
 .title {
   font-family: var(--font-display);
-  font-size: 2.5rem;
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
   font-weight: 800;
   color: var(--text-primary);
 }
@@ -524,7 +524,7 @@ section {
 
 .hero-title {
   font-family: var(--font-display);
-  font-size: 3.8rem;
+  font-size: clamp(2.4rem, 7vw, 4.2rem);
   font-weight: 800;
   line-height: 1.15;
   color: var(--text-primary);
@@ -533,7 +533,7 @@ section {
 
 .hero-subtitle {
   font-family: var(--font-display);
-  font-size: 1.8rem;
+  font-size: clamp(1.1rem, 3.5vw, 1.8rem);
   font-weight: 600;
   color: var(--neon-cyan);
   margin-bottom: 24px;
@@ -1852,6 +1852,16 @@ section {
   .hero-glass-box {
     margin-top: 20px;
   }
+  .hero-section::before {
+    width: 320px;
+    height: 320px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    right: auto;
+    opacity: 0.15;
+    z-index: 0;
+  }
   
   .about-grid {
     grid-template-columns: 1fr;
@@ -1898,12 +1908,10 @@ section {
   section {
     padding: 80px 0;
   }
-  
-  .hero-title {
-    font-size: 2.8rem;
-  }
-  .title {
-    font-size: 2rem;
+  .hero-section::before {
+    width: 250px;
+    height: 250px;
+    opacity: 0.12;
   }
   
   .menu-toggle {
