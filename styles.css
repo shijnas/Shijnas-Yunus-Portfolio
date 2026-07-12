@@ -539,20 +539,19 @@ section {
 .hero-section::before {
   content: '';
   position: absolute;
-  top: 15%;
-  right: 8%;
-  width: 450px;
-  height: 450px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 550px;
   background-image: url('profile.jpg');
   background-size: cover;
-  background-position: center;
-  opacity: 1;
+  background-position: center top;
+  opacity: 0.95;
   filter: grayscale(100%);
   pointer-events: none;
   z-index: 0;
-  border-radius: 50%;
-  mask-image: radial-gradient(circle, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 70%);
-  -webkit-mask-image: radial-gradient(circle, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 70%);
+  mask-image: linear-gradient(to left, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 0) 100%), linear-gradient(to top, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
+  -webkit-mask-image: linear-gradient(to left, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 0) 100%), linear-gradient(to top, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
 }
 
 .hero-container {
