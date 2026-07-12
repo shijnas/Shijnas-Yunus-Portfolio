@@ -199,7 +199,6 @@ document.addEventListener('DOMContentLoaded', () => {
         simScene.className = 'sim-scene-running-2';
         actionIndicator.textContent = "STEP 2: POSITION PLAYER";
         addLog("[QA Console] Moving player model adjacent to door [Driver Side].", 'active');
-        if (step1) step1.style.color = 'rgba(0, 242, 254, 0.4)';
         if (step2) {
           step2.style.color = 'var(--neon-cyan)';
           step2.style.fontWeight = 'bold';
@@ -210,7 +209,6 @@ document.addEventListener('DOMContentLoaded', () => {
           simScene.className = 'sim-scene-running-3';
           actionIndicator.textContent = "STEP 3: MASH ENTER KEY";
           addLog("[QA Console] Simulating inputs: Key[F] pressed repeatedly (x5)...", 'active');
-          if (step2) step2.style.color = 'rgba(0, 242, 254, 0.4)';
           if (step3) {
             step3.style.color = 'var(--neon-cyan)';
             step3.style.fontWeight = 'bold';
@@ -228,7 +226,6 @@ document.addEventListener('DOMContentLoaded', () => {
             addLog("[ERROR] Player physics state set to KINEMATIC. Controls blocked.", 'error');
             addLog("[System] QA reproduction completed. Bug 100% verified.", 'active');
             
-            if (step3) step3.style.color = 'rgba(0, 242, 254, 0.4)';
             if (step4) {
               step4.style.color = 'var(--error)';
               step4.style.fontWeight = 'bold';
