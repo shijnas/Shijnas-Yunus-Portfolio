@@ -1677,6 +1677,13 @@ section {
 /* ==========================================================================
    RESUME SECTION
    ========================================================================== */
+.resume-section {
+  padding-top: 80px;
+}
+.resume-section .section-header {
+  margin-bottom: 30px;
+}
+
 .resume-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
