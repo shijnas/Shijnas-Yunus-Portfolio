@@ -392,7 +392,7 @@ section {
   background-image: url('profile.jpg');
   background-size: cover;
   background-position: center;
-  opacity: 0.08;
+  opacity: 1;
   filter: grayscale(100%);
   pointer-events: none;
   z-index: 0;
