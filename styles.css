@@ -461,8 +461,10 @@ section {
 .hero-section {
   min-height: 100vh;
   display: flex;
-  align-items: center;
-  padding-top: 100px;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 120px;
+  padding-bottom: 60px;
   background: 
     radial-gradient(circle at 20% 30%, rgba(0, 242, 254, 0.08) 0%, transparent 40%),
     radial-gradient(circle at 80% 70%, rgba(157, 78, 221, 0.08) 0%, transparent 45%),
