@@ -592,7 +592,7 @@ section {
   bottom: 0;
   right: 0;
   width: 440px;
-  background-image: url('profile.jpg');
+  background-image: url('profile.png');
   background-size: cover;
   background-position: center top;
   opacity: 0.82;
@@ -702,6 +702,8 @@ section {
 .hero-glass-box {
   display: flex;
   align-items: center;
+  width: 290px;
+  flex-shrink: 0;
 }
 
 .scene-card {
